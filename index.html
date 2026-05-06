@@ -1,11 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wittycha.id</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wittycha.id</title>
+
+<!-- STYLE -->
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8fbf8;
+    color: #222;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    background: linear-gradient(135deg, #eaf4ec, #fff0f5);
+}
+
+.hero h2 {
+    font-size: 45px;
+}
+
+.hero p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* SECTION */
+section {
+    padding: 60px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
+}
+
+/* CARD */
+article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+/* ANIMASI */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* DARK MODE */
+.dark {
+    background: #111;
+    color: white;
+}
+
+.dark header,
+.dark footer,
+.dark article {
+    background: #222;
+}
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+
+<header>
+    <h1>Wittycha 💚</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#product">Product</a>
+        <a href="#about">About</a>
+    </nav>
+    <button onclick="toggleDark()">🌙</button>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div>
+        <h2>Matcha Meets K-Pop 💚</h2>
+        <p>Minum matcha sambil fangirling? Bisa banget di sini ✨</p>
+        <a href="#product" class="btn">Explore</a>
+    </div>
+</section>
+
+<!-- PRODUCT -->
+<section id="product" class="fade">
+    <h2>Best Seller</h2>
+
+    <div class="grid">
+        <article>
+            <img src="img/matcha.jpg">
+            <h3>Matcha Latte</h3>
+        </article>
+
+        <article>
+            <img src="img/latte.jpg">
+            <h3>Matcha Cream</h3>
+        </article>
+
+        <article>
+            <img src="img/photocard.jpg">
+            <h3>Photocard Set</h3>
+        </article>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="fade">
+    <h2>About</h2>
+    <p>Wittycha adalah cafe aesthetic dengan vibes matcha & K-pop yang lucu dan memanjakan mata 💖</p>
+</section>
+
+<footer>
+    <p>© 2026 Wittycha</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+// smooth scroll
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e){
+        if(this.getAttribute("href").startsWith("#")){
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href"))
+            .scrollIntoView({behavior: "smooth"});
+        }
+    });
+});
+
+// dark mode
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+
+// fade animation
+const elements = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+    elements.forEach(el => {
+        if(el.getBoundingClientRect().top < window.innerHeight - 50){
+            el.classList.add("show");
+        }
+    });
+});
+</script>
+
 </body>
 </html>

@@ -17,9 +17,23 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 60px;
+    padding: 20px 40px;
     background: white;
     border-bottom: 1px solid #eee;
+}
+
+header > h1 {
+    font-family: 'Dancing Script';
+}
+
+header > button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
 }
 
 nav a {
@@ -29,19 +43,24 @@ nav a {
 }
 
 .hero {
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
-    align-items: center;
-    padding: 0 60px;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
     background: linear-gradient(135deg, #eaf4ec, #fff0f5);
 }
 
+.logo{
+    width: min(250px, 30vw);
+}
+
 .hero h2 {
+    margin: 0;
     font-size: 45px;
 }
 
 .hero p {
-    margin: 10px 0;
     color: #666;
 }
 
@@ -54,7 +73,6 @@ nav a {
     text-decoration: none;
 }
 
-
 section {
     padding: 60px;
 }
@@ -66,12 +84,17 @@ section {
     gap: 20px;
 }
 
-/* CARD */
 article {
     background: white;
     border-radius: 12px;
     overflow: hidden;
     transition: 0.3s;
+    padding-bottom: 20px;
+}
+
+article h3,
+article p{
+    padding: 0 10px;
 }
 
 article:hover {
@@ -82,6 +105,10 @@ article:hover {
     width: 100%;
     height: 500px;
     object-fit: cover;
+}
+
+.product > h3{
+    margin-left: 50px;
 }
 
 .cafe{
@@ -117,79 +144,98 @@ footer {
 .dark header,
 .dark footer,
 .dark article {
-    background: #222;
+    background: #111;
 }
+
+.dark > .hero {
+    background: linear-gradient(135deg, #1a2a1d, #2b1d2f);
+}
+
+.dark > .hero > p {
+    color: #ccc;
+}
+
+.dark header button {
+    background: #111;
+    color: white;
+}
+
 </style>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+MX+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
 
-    <h1>Wittycha 💚</h1>
+    <h1>Wittycha.id</h1>
     
     <nav>
         <a href="#home">Home</a>
-        <a href="#product">Product</a>
-        <a href="#about">About</a>
-        <a href="#OurStory">Our Story</a>
+        <a href="#">Product</a>
+        <a href="#">About</a>
+        <a href="#">Our Story</a>
     </nav>
     <button onclick="toggleDark()">🌙</button>
 </header>
 
-<!-- HERO -->
+
 <section id="home" class="hero">
-    <div>
+        <img class="logo" src="img/logo.png" alt="">
         <h2>Matcha Meets K-Pop 💚</h2>
-        <p>Minum matcha sambil fangirling? Bisa banget di sini ✨</p>
+        <p>Your Safe Place for Matcha & K-pop Happiness✨</p>
         <a href="#product" class="btn">Explore</a>
-    </div>
 </section>
 
-<!-- PRODUCT -->
+
 <section id="product" class="fade">
     <h2>Best Seller</h2>
 
     <section class="grid">
         <article>
-            <img class="product" src="img/latte.jpg">
+            <img class="product" src="img/cream.jpg">
             <h3>Matcha Latte</h3>
+            <p>Perpaduan matcha premium dengan susu creamy yang menghasilkan rasa lembut dan menenangkan di setiap tegukan ✨</p>
         </article>
 
         <article>
-            <img class="product" src="img/matcha.jpg">
+            <img class="product" src="img/latte.jpg">
             <h3>Matcha Cream</h3>
+            <p>Minuman matcha creamy dengan foam lembut di atasnya, cocok untuk menemani healing time dan fangirling session-mu 💚</p>
         </article>
 
         <article>
             <img class="product" src="img/photocard.jpg">
             <h3>Photocard Set</h3>
+            <p>Koleksi photocard lucu dan aesthetic yang siap menemani meja belajar, phone case, atau album favoritmu ✨</p>
         </article>
     </section>
 </section>
 
-<!-- ABOUT -->
+
 <section id="about" class="fade">
     <h2>About</h2>
-    <p>Wittycha adalah cafe aesthetic dengan vibes matcha & K-pop yang lucu dan memanjakan mata 💖</p>
+    <p>Nikmati creamy matcha, dessert manis, dan suasana cozy dengan sentuhan K-pop yang dibuat untuk menemani momen healing dan fangirling-mu. Di WittyCha.id, kami menghadirkan lebih dari sekadar minuman — kami menciptakan tempat kecil penuh kenyamanan, tawa, dan little happiness untuk menemani harimu, baik saat sendiri, bersama teman, maupun saat menikmati musik favoritmu 🍵🎀✨</p>
 </section>
 
-<!-- Our Story -->
+
 <section id="OurStory" class="fade">
     <h2>Our Story</h2>
-    <img class="Cafe" src="img/Wittycha.png" alt="Cafe Wittycha">
-    <p>Semua berawal dari kecintaan kami pada dua hal: segelas matcha yang creamy dan segala sesuatu yang membuat kita tersenyum saat melihatnya. Kami percaya bahwa kebahagiaan itu sederhana, bisa datang dari aroma matcha yang menenangkan atau dari sebuah barang lucu yang menemani hari-harimu. Di WittyCha, kami menggabungkan rasa dan benda-benda paling menggemaskan untuk menjadi penghibur di tengah sibuknya harimu. Selamat datang di rumah kecil kami yang penuh warna!</p>
- </section>
+    <section class="grid">
+        <article>
+            <img class="Cafe" src="img/Wittycha.png" alt="Cafe Wittycha">
+            <p>Semua berawal dari kecintaan kami pada dua hal: segelas matcha yang creamy dan segala sesuatu yang membuat kita tersenyum saat melihatnya. Kami percaya bahwa kebahagiaan itu sederhana, bisa datang dari aroma matcha yang menenangkan atau dari sebuah barang lucu yang menemani hari-harimu. Di WittyCha, kami menggabungkan rasa dan benda-benda paling menggemaskan untuk menjadi penghibur di tengah sibuknya harimu. Selamat datang di rumah kecil kami yang penuh warna!</p>
+        </article>
+    </section>
+</section>        
 
 <footer>
     <p> Copyright ©2026 Wittycha.id. All Rights Reserved.</p>
 </footer>
 
-<!-- SCRIPT -->
+
 <script>
-// smooth scroll
 document.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", function(e){
         if(this.getAttribute("href").startsWith("#")){
@@ -200,12 +246,12 @@ document.querySelectorAll("a").forEach(link => {
     });
 });
 
-// dark mode
+
 function toggleDark(){
     document.body.classList.toggle("dark");
 }
 
-// fade animation
+
 const elements = document.querySelectorAll(".fade");
 
 window.addEventListener("scroll", () => {

@@ -8,7 +8,14 @@
 
 <style>
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #f8fbf8;
     color: #222;
@@ -62,6 +69,7 @@ nav a {
 
 .hero p {
     color: #666;
+    margin-bottom: 10px;
 }
 
 .btn {
@@ -111,18 +119,100 @@ article:hover {
     margin-left: 50px;
 }
 
-.cafe{
-    width: 20%;
-    height: 20%;
+.fun-about {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.fun-card {
+    background: white;
+    padding: 25px;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+.fun-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-8px);
+    }
+}
+
+.gridcafe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+}
+
+.gridcafe img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 footer {
-    text-align: center;
-    padding: 25px;
-    background: white;
-    border-top: 1px solid #eee;
+    background: linear-gradient(135deg, #eaf4ec, #fff0f5);
+    padding: 40px;
 }
 
+.footerlogo{
+    width: 20dvw;
+}
+
+.sociallogo{
+    width: 50px;
+    cursor: pointer;
+}
+
+.logososialmedia{
+    display: flex;
+    flex-direction: row;
+}
+
+footer section {
+    padding: 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 .fade {
     opacity: 0;
@@ -135,6 +225,13 @@ footer {
     transform: translateY(0);
 }
 
+.dark nav a {
+    color: #ddd;
+}
+
+.dark nav a:hover {
+    color: #8bc98f;
+}
 
 .dark {
     background: #111;
@@ -142,7 +239,6 @@ footer {
 }
 
 .dark header,
-.dark footer,
 .dark article {
     background: #111;
 }
@@ -157,6 +253,25 @@ footer {
 
 .dark header button {
     background: #111;
+    color: white;
+}
+
+.dark footer {
+    background: #222;
+}
+
+.dark .footer-column p,
+.dark .footer-brand p,
+.dark .footer-bottom p {
+    color: #ccc;
+}
+
+.dark .footer-bottom {
+    border-top: 1px solid #444;
+}
+
+.dark .fun-card {
+    background: #222;
     color: white;
 }
 
@@ -176,6 +291,7 @@ footer {
         <a href="#">Product</a>
         <a href="#">About</a>
         <a href="#">Our Story</a>
+        <a href="#">Gallery</a>
     </nav>
     <button onclick="toggleDark()">🌙</button>
 </header>
@@ -194,13 +310,13 @@ footer {
 
     <section class="grid">
         <article>
-            <img class="product" src="img/cream.jpg">
+            <img class="product" src="img/latte.jpg">
             <h3>Matcha Latte</h3>
             <p>Perpaduan matcha premium dengan susu creamy yang menghasilkan rasa lembut dan menenangkan di setiap tegukan ✨</p>
         </article>
 
         <article>
-            <img class="product" src="img/latte.jpg">
+            <img class="product" src="img/cream.jpg">
             <h3>Matcha Cream</h3>
             <p>Minuman matcha creamy dengan foam lembut di atasnya, cocok untuk menemani healing time dan fangirling session-mu 💚</p>
         </article>
@@ -216,24 +332,86 @@ footer {
 
 <section id="about" class="fade">
     <h2>About</h2>
-    <p>Nikmati creamy matcha, dessert manis, dan suasana cozy dengan sentuhan K-pop yang dibuat untuk menemani momen healing dan fangirling-mu. Di WittyCha.id, kami menghadirkan lebih dari sekadar minuman — kami menciptakan tempat kecil penuh kenyamanan, tawa, dan little happiness untuk menemani harimu, baik saat sendiri, bersama teman, maupun saat menikmati musik favoritmu 🍵🎀✨</p>
+    <p>
+        Nikmati creamy matcha, dessert manis, dan suasana cozy dengan sentuhan 
+        K-pop yang dibuat untuk menemani momen healing dan fangirling-mu.
+    </p>
+
+    <section class="fun-about">
+        <article class="fun-card">
+            <h3>🍵 Premium Matcha</h3>
+            <p>Fresh, creamy, and calming in every sip.</p>
+        </article>
+
+        <article class="fun-card">
+            <h3>🎀 Cute Merch</h3>
+            <p>Photocard, stickers, and adorable accessories.</p>
+        </article>
+
+        <article class="fun-card">
+            <h3>☁️ Cozy Space</h3>
+            <p>Your little comfort zone for healing & fangirling.</p>
+        </article>
+    </section>
+    
 </section>
+
+
 
 
 <section id="OurStory" class="fade">
     <h2>Our Story</h2>
-    <section class="grid">
+    <section class="gridcafe">
         <article>
-            <img class="Cafe" src="img/Wittycha.png" alt="Cafe Wittycha">
+            <img src="img/Wittycha.png" alt="Cafe Wittycha">
             <p>Semua berawal dari kecintaan kami pada dua hal: segelas matcha yang creamy dan segala sesuatu yang membuat kita tersenyum saat melihatnya. Kami percaya bahwa kebahagiaan itu sederhana, bisa datang dari aroma matcha yang menenangkan atau dari sebuah barang lucu yang menemani hari-harimu. Di WittyCha, kami menggabungkan rasa dan benda-benda paling menggemaskan untuk menjadi penghibur di tengah sibuknya harimu. Selamat datang di rumah kecil kami yang penuh warna!</p>
         </article>
     </section>
 </section>        
 
 <footer>
-    <p> Copyright ©2026 Wittycha.id. All Rights Reserved.</p>
-</footer>
+    <section class="footer-grid">
+        <section>
+            <img class="footerlogo" src="img/logo.png" alt="Logofooter">
+            <h2>Wittycha 💚</h2>
+            <p>Your Safe Place for Matcha & K-pop Happiness✨</p>
+        </section>
 
+        <section>
+            <h3>Store</h3>
+            <p>Pontianak</p>
+            <p>09.00 - 21.00</p>
+        </section>
+
+        <section>
+            <h3>Contact us</h3>
+            <h4>Whatsapp</h4>
+            <p>+62 812-3456-78910</p>
+            <h4>Email</h4>
+            <p>Wittycha@gmail.com</p>
+        </section>
+
+        <section>
+            <h3>Information</h3>
+            <p>Our Story</p>
+            <p>Gallery</p>
+        </section>
+
+        <section class="socialmedia">
+            <h3>Social Media</h3>
+            <section class="logososialmedia">
+                <img class="sociallogo" src="img/logoig.webp" alt="logoig">
+                <img class="sociallogo" src="img/logotiktok.webp" alt="logotiktok">
+            </section>
+                
+            </section>
+        </section>
+    </section>
+
+    <section class="footer-bottom">
+        <p>Copyright ©2026 Wittycha.id. All Rights Reserved.</p>
+    </section>
+</footer>
 
 <script>
 document.querySelectorAll("a").forEach(link => {

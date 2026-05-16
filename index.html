@@ -24,8 +24,13 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
-    background: white;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
     border-bottom: 1px solid #eee;
 }
 
@@ -47,6 +52,23 @@ nav a {
     margin-left: 20px;
     text-decoration: none;
     color: #555;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #2e7d32;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .hero {
@@ -56,6 +78,88 @@ nav a {
     align-items:center;
     justify-content: center;
     background: linear-gradient(135deg, #eaf4ec, #fff0f5);
+    position: relative;
+    overflow: hidden;
+}
+
+.floating-icons span{
+    position: absolute;
+    top: -100px;
+
+    font-size: 28px;
+    opacity: 0.7;
+
+    animation: falling linear infinite;
+}
+
+/* random positions */
+
+.floating-icons span:nth-child(1){
+    left: 10%;
+    animation-duration: 9s;
+}
+
+.floating-icons span:nth-child(2){
+    left: 25%;
+    animation-duration: 13s;
+}
+
+.floating-icons span:nth-child(3){
+    left: 40%;
+    animation-duration: 11s;
+}
+
+.floating-icons span:nth-child(4){
+    left: 60%;
+    animation-duration: 15s;
+}
+
+.floating-icons span:nth-child(5){
+    left: 80%;
+    animation-duration: 10s;
+}
+
+.floating-icons span:nth-child(6){
+    left: 92%;
+    animation-duration: 14s;
+}
+
+.floating-icons span:nth-child(7){
+    left: 55%;
+    animation-duration: 12s;
+}
+
+.floating-icons span:nth-child(8){
+    left: 75%;
+    animation-duration: 16s;
+}
+
+.floating-icons span:nth-child(odd){
+    opacity: 0.5;
+}
+
+.floating-icons span:nth-child(even){
+    opacity: 0.8;
+}
+
+@keyframes falling{
+
+    from{
+        transform: translateY(-100px) rotate(0deg);
+    }
+
+    to{
+        transform: translateY(110vh) rotate(360deg);
+    }
+
+}
+
+.hero img,
+.hero h2,
+.hero p,
+.hero .btn{
+    position: relative;
+    z-index: 2;
 }
 
 .logo{
@@ -74,11 +178,18 @@ nav a {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 14px 28px;
     background: #2e7d32;
     color: white;
-    border-radius: 8px;
+    border-radius: 50px;
     text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(46,125,50,0.25);
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(46,125,50,0.35);
 }
 
 section {
@@ -105,18 +216,46 @@ article p{
     padding: 0 10px;
 }
 
-article:hover {
-    transform: translateY(-5px);
-}
-
-.product {
+.product{
     width: 100%;
     height: 500px;
     object-fit: cover;
 }
 
+article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+
 .product > h3{
     margin-left: 50px;
+}
+
+.detail-btn{
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0;
+    padding: 10px 18px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.detail-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(46,125,50,0.2);
 }
 
 .fun-about {
@@ -152,17 +291,39 @@ article:hover {
 }
 
 .gridcafe {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 20px;
+    columns: 1 220px;
+    column-gap: 20px;
 }
 
 .gridcafe img {
     width: 100%;
-    height: 800px;
-    object-fit: cover;
+    margin-bottom: 20px;
     border-radius: 12px;
+    display: block;
+    transition: 0.3s;
 }
+
+.review-section{
+    width: 100%;
+    overflow: hidden;
+}
+
+.review-track{
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+
+.review-card{
+    min-width: 320px;
+
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+
+    flex-shrink: 0;
+}
+
 
 footer {
     background: linear-gradient(135deg, #eaf4ec, #fff0f5);
@@ -275,6 +436,11 @@ footer section {
     color: white;
 }
 
+.dark .review-card{
+    background: #222;
+    color: white;
+}
+
 </style>
 
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+MX+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -298,6 +464,16 @@ footer section {
 
 
 <section id="home" class="hero">
+    <section class="floating-icons">
+    <span>🍵</span>
+    <span>💚</span>
+    <span>🍃</span>
+    <span>🌿</span>
+    <span>⭐</span>
+    <span>✨</span>
+    <span>🎀</span>
+    <span>☁️</span>
+    </section>
         <img class="logo" src="img/logo.png" alt="">
         <h2>Matcha Meets K-Pop 💚</h2>
         <p>Your Safe Place for Matcha & K-pop Happiness✨</p>
@@ -327,6 +503,7 @@ footer section {
             <p>Koleksi photocard lucu dan aesthetic yang siap menemani meja belajar, phone case, atau album favoritmu ✨</p>
         </article>
     </section>
+    <a href="#" class="detail-btn">Lihat Selengkapnya →</a>
 </section>
 
 
@@ -353,10 +530,8 @@ footer section {
             <p>Your little comfort zone for healing & fangirling.</p>
         </article>
     </section>
-    
+    <a href="#" class="detail-btn">Lihat Selengkapnya →</a>
 </section>
-
-
 
 
 <section id="OurStory" class="fade">
@@ -367,7 +542,44 @@ footer section {
             <p>Semua berawal dari kecintaan kami pada dua hal: segelas matcha yang creamy dan segala sesuatu yang membuat kita tersenyum saat melihatnya. Kami percaya bahwa kebahagiaan itu sederhana, bisa datang dari aroma matcha yang menenangkan atau dari sebuah barang lucu yang menemani hari-harimu. Di WittyCha, kami menggabungkan rasa dan benda-benda paling menggemaskan untuk menjadi penghibur di tengah sibuknya harimu. Selamat datang di rumah kecil kami yang penuh warna!</p>
         </article>
     </section>
+    <a href="#" class="detail-btn">Lihat Selengkapnya →</a>
 </section>        
+
+<section class="review-section">
+
+    <h2>Sweet Words From Our Customers ✨</h2>
+
+    <section class="review-track">
+
+        <article class="review-card">
+            <p>"Matchanya creamy banget dan tempatnya super calming 😭"</p>
+            <h4>— Erin</h4>
+        </article>
+
+        <article class="review-card">
+            <p>"Photocard set-nya lucu parah, vibesnya kayak cafe Korea."</p>
+            <h4>— Titing</h4>
+        </article>
+
+        <article class="review-card">
+            <p>"Healing + fangirling place terbaik sejauh ini 💚"</p>
+            <h4>— Elisabet</h4>
+        </article>
+
+        <article class="review-card">
+            <p>"Tempat favorit untuk jadi moodbooster setelah hari yang sibuk 😊"</p>
+            <h4>— Virginia</h4>
+        </article>
+
+        <article class="review-card">
+            <p>"Cafe aesthetic favorit buat nugas."</p>
+            <h4>— Ervin</h4>
+        </article>
+
+    </section>
+
+</section>
+
 
 <footer>
     <section class="footer-grid">
@@ -439,6 +651,29 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+const track = document.querySelector(".review-track");
+
+track.innerHTML += track.innerHTML;
+
+let position = 0;
+const speed = 0.5;
+
+function animate() {
+
+    position += speed;
+
+    if (position >= track.scrollWidth / 2) {
+        position -= track.scrollWidth / 2;
+    }
+
+    track.style.transform = `translateX(-${position}px)`;
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
 </script>
 
 </body>

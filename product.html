@@ -515,14 +515,14 @@ footer section {
 }
 
 .cta-section{
+    max-width: 500px;
+    margin: 100px auto 0;
+    padding: 45px 30px;
     text-align: center;
-    padding: 120px 40px;
-    margin-top: 120px;
     background: white;
-    border-radius: 40px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    transform: translateY(0);
-    transition: transform 0.3s ease;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
 .cta-section:hover{
@@ -534,14 +534,15 @@ footer section {
 }
 
 .cta-section h2{
-    font-size: 52px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
 .cta-section p{
-    max-width: 600px;
-    margin: auto auto 30px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #666;
 }
 
 .menu-slider-section{
@@ -640,6 +641,72 @@ footer section {
 
 .slide-btn:hover{
     transform: scale(1.08);
+}
+
+.funny-card{
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.pair-item{
+    font-size: 50px;
+    transition: 0.5s;
+}
+
+.pair-item h3{
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.heart{
+    font-size: 40px;
+    animation: pulse 1.5s infinite;
+}
+
+.match-text{
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.5s;
+
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.funny-card:hover .left{
+    transform: translateX(-15px) rotate(-8deg);
+}
+
+.funny-card:hover .right{
+    transform: translateX(15px) rotate(8deg);
+}
+
+.funny-card:hover .match-text{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes pulse{
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+
 }
 
 .fade {
@@ -966,6 +1033,17 @@ footer section {
                 <p>Rp 120.000</p>
             </article>
 
+            <article class="slider-card">
+                <img src="https://thumbs.dreamstime.com/b/two-cups-matcha-latte-cute-art-top-view-green-lattes-wooden-table-one-smiling-face-heart-design-419964574.jpg" alt="Couple Matcha">
+                <h4>Couple Matcha Set</h4>
+                <p>Rp 75.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7r990-lwzi8c3phq5oe7" alt="Matcha Dessert Box">
+                <h4>Matcha Dessert Box</h4>
+                <p>Rp 45.000</p>
+            </article>
         </section>
 
         <button class="slide-btn next">
@@ -1007,19 +1085,46 @@ footer section {
 
     <section class="pairing-grid">
 
-        <article class="pair-card">
-            <h3>🍵 Matcha Latte</h3>
-            <p>+</p>
-            <h3>🍰 Cheesecake</h3>
+        <article class="pair-card funny-card">
+            <section class="pair-item left">
+                🍵
+                <h3>Matcha Latte</h3>
+            </section>
+
+            <section class="heart">
+                💚
+            </section>
+
+            <section class="pair-item right">
+                ⭐ 
+                <h3>Matcha Gift Box</h3>
+            </section>
+
+            <p class="match-text">IT'S A MATCH ✨</p>
         </article>
 
-        <article class="pair-card">
-            <h3>💚 Matcha Cream</h3>
-            <p>+</p>
-            <h3>🎀 Photocard Set</h3>
+
+        <article class="pair-card funny-card">
+            <section class="pair-item left">
+                💚
+                <h3>Matcha Cream</h3>
+            </section>
+
+            <section class="heart">
+                🎀
+            </section>
+
+            <section class="pair-item right">
+                ✨
+                <h3>Photocard Set</h3>
+            </section>
+
+            <p class="match-text">Soulmate Combo 😭</p>
         </article>
 
     </section>
+
+</section>
 
 </section>
 
@@ -1037,7 +1142,7 @@ footer section {
     <a href="https://wa.me/62812345678910?text=Halo%20Wittycha%20👋💚%0ASaya%20mau%20pesan" class="detail-btn" target="_blank">Order Now</a>
 
 </section>
-</section>
+
 
 
 <footer>

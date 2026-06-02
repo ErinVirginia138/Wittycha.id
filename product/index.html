@@ -316,6 +316,34 @@ nav a:hover::after {
     box-shadow: 0 15px 25px rgba(46,125,50,0.35);
 }
 
+.detail-btn-slider{
+    display: block;
+    width: fit-content;
+
+    margin: 12px auto 0;
+
+    padding: 10px 22px;
+
+    border-radius: 999px;
+    text-decoration: none;
+
+    background: #2e7d32;
+    color: white;
+
+    transition: 0.3s ease;
+
+}
+
+.detail-btn-slider:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(46,125,50,0.25);
+}
+
+.dark .detail-btn-slider{
+    background: #8bc98f;
+    color: #111;
+}
+
 section {
     padding: 60px;
 }
@@ -917,7 +945,7 @@ footer section {
     
     <nav>
         <a href="../index.html">Home</a>
-        <a href="product.html">Product</a>
+        <a href="index.html">Product</a>
         <a href="#">About</a>
         <a href="#">Our Story</a>
         <a href="#">Gallery</a>
@@ -1058,7 +1086,6 @@ footer section {
                 <p>Rp 36.000</p>
             </article>
 
-
         </section>
 
         <button class="slide-btn next">
@@ -1066,6 +1093,7 @@ footer section {
         </button>
 
     </section>
+        <a href="matchadrinks.html" class="detail-btn-slider">See Detail →</a>
     </section>
 
 
@@ -1116,8 +1144,11 @@ footer section {
         <button class="slide-btn next">
             ❯
         </button>
-
+        
     </section>
+    <a href="merchandise.html" class="detail-btn-slider">See Detail →</a>
+    </section>
+
 
     <h3 class="slider-title">✨ Special Items</h3>
 
@@ -1165,6 +1196,7 @@ footer section {
         </button>
 
     </section>
+    <a href="specialitems.html" class="detail-btn-slider">See Detail →</a>
 </section>
 
 <section class="featured-section fade">

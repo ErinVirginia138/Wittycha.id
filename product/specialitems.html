@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Cafe matcha aesthetic di Pontianak dengan menu matcha creamy, photocard lucu, dan tempat nongkrong cozy ala K-pop hanya di Wittycha.id.">
+<meta name="keywords" content="cafe matcha pontianak, matcha creamy, cafe aesthetic, photocard cafe, tempat nongkrong pontianak, cafe kpop, wittycha, matcha latte, cozy cafe, cafe healing">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merchandise</title>
+
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f8fbf8;
+    color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #eee;
+}
+
+header > h1 {
+    font-family: 'Dancing Script';
+}
+
+header > button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #2e7d32;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    padding: 40px;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,0.78),
+        rgba(255,245,250,0.78)
+    ),
+
+    url("../img/background.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    backdrop-filter: blur(2px);
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(139,201,143,0.15),
+    transparent 30%);
+
+    z-index:0;
+}
+
+.floating-icons span{
+    position: absolute;
+    top: -100px;
+
+    font-size: 28px;
+    opacity: 0.7;
+
+    animation: falling linear infinite;
+}
+
+
+.floating-icons span:nth-child(1){
+    left: 10%;
+    animation-duration: 9s;
+}
+
+.floating-icons span:nth-child(2){
+    left: 25%;
+    animation-duration: 13s;
+}
+
+.floating-icons span:nth-child(3){
+    left: 40%;
+    animation-duration: 11s;
+}
+
+.floating-icons span:nth-child(4){
+    left: 60%;
+    animation-duration: 15s;
+}
+
+.floating-icons span:nth-child(5){
+    left: 80%;
+    animation-duration: 10s;
+}
+
+.floating-icons span:nth-child(6){
+    left: 92%;
+    animation-duration: 14s;
+}
+
+.floating-icons span:nth-child(7){
+    left: 55%;
+    animation-duration: 12s;
+}
+
+.floating-icons span:nth-child(8){
+    left: 75%;
+    animation-duration: 16s;
+}
+
+.floating-icons span:nth-child(odd){
+    opacity: 0.5;
+}
+
+.floating-icons span:nth-child(even){
+    opacity: 0.8;
+}
+
+@keyframes falling{
+
+    from{
+        transform: translateY(-100px) rotate(0deg);
+    }
+
+    to{
+        transform: translateY(110vh) rotate(360deg);
+    }
+
+}
+
+.menu-section{
+    padding: 100px 60px;
+}
+
+.menu-title{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 100px;
+}
+
+.menu-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.menu-item.reverse img{
+    order: 2;
+}
+
+.menu-item.reverse .menu-content{
+    order: 1;
+}
+
+.menu-item img{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 32px;
+    transition: 0.5s;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.menu-item:hover img{
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(10,10,10,0.15);
+}
+
+.menu-content{
+    position: relative;
+}
+
+.menu-content h2{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.menu-content h3{
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.menu-content p{
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.badge{
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    background: #2e7d32;
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+}
+
+.detail-btn{
+    display: inline-block;
+    padding: 14px 28px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.detail-btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(46,125,50,0.25);
+}
+
+.hero img,
+.hero h2,
+.hero p,
+.hero .btn{
+    position: relative;
+    z-index: 2;
+}
+
+.logo{
+    width: min(250px, 30vw);
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 45px;
+}
+
+.hero p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(46,125,50,0.25);
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(46,125,50,0.35);
+}
+
+section {
+    padding: 60px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+}
+
+article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    padding-bottom: 20px;
+}
+
+article h3,
+article h4,
+article p{
+    padding: 0 10px;
+}
+
+.product{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+
+.product > h3{
+    margin-left: 50px;
+}
+
+
+footer {
+    background: linear-gradient(135deg, #eaf4ec, #fff0f5);
+    padding: 40px;
+    margin-top: 120px;
+}
+
+.footerlogo{
+    width: 20dvw;
+}
+
+.sociallogo{
+    width: 40px;
+    cursor: pointer;
+}
+
+.sociallogoig{
+    width: 50px;
+    cursor: pointer;
+}
+
+.logososialmedia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+footer section {
+    padding: 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+@media (max-width: 900px){
+
+    .menu-item{
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item.reverse img,
+    .menu-item.reverse .menu-content{
+        order: unset;
+    }
+
+    .menu-content h2{
+        font-size: 36px;
+    }
+
+    .menu-item img{
+        height: 400px;
+    }
+
+}
+
+.category-section{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.category-section h2{
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+
+.category-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+}
+
+.category-card{
+    background: white;
+    padding: 40px 30px;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.category-card:hover{
+    transform: translateY(-10px);
+}
+
+.featured-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.featured-section img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 40px;
+    transition: 0.5s;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.featured-section img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+.featured-mini{
+    color: #2e7d32;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.featured-content h2{
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.featured-content p{
+    line-height: 1.8;
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+.pairing-section{
+    text-align: center;
+    margin-top: 120px;
+}
+
+.pairing-section h2{
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+
+.pairing-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 30px;
+}
+
+.pair-card{
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.pair-card:hover{
+    transform: scale(1.03);
+}
+
+.pair-card p{
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.cta-section{
+    max-width: 500px;
+    margin: 100px auto 0;
+    padding: 45px 30px;
+    text-align: center;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.cta-section:hover{
+    transform: translateY(0) scale(1.03);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.12);
+}
+
+.fade.show.cta-section:hover{
+    transform: translateY(0) scale(1.03);
+}
+
+.cta-section h2{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cta-section p{
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.menu-slider-section{
+    margin-top: 120px;
+}
+
+.menu-slider-section h2{
+    text-align: center;
+    font-size: 46px;
+    margin-bottom: 60px;
+}
+
+.slider-title{
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.slider-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.menu-slider{
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px;
+}
+
+.menu-slider::-webkit-scrollbar{
+    display: none;
+}
+
+.slider-card{
+    min-width: 280px;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.slider-card:hover{
+    transform: translateY(-10px);
+}
+
+.slider-card img{
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+}
+
+.slider-card h4,
+.slider-card p{
+    padding: 15px 20px;
+}
+
+.slide-btn{
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.slide-btn:hover{
+    transform: scale(1.08);
+}
+
+.funny-card{
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pair-item{
+    font-size: 50px;
+    transition: 0.5s;
+}
+
+.pair-item h3{
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.heart{
+    font-size: 40px;
+    animation: pulse 1.5s infinite;
+}
+
+.match-text{
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.5s;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.funny-card:hover .left{
+    transform: translateX(-15px) rotate(-8deg);
+}
+
+.funny-card:hover .right{
+    transform: translateX(15px) rotate(8deg);
+}
+
+.funny-card:hover .match-text{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-message{
+    position: fixed;
+
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 360px;
+    max-width: 90%;
+
+    padding: 28px;
+
+    border-radius: 28px;
+    text-align: center;
+
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .4s ease;
+}
+
+.popup-message.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-message h3{
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.popup-message p{
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+}
+
+.popup-message a{
+    display: inline-block;
+    margin-top: 18px;
+
+    padding: 10px 22px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    background: #2e7d32;
+    color: white;
+}
+
+.close-popup{
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    border: none;
+    background: none;
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dark nav a {
+    color: #ddd;
+}
+
+.dark nav a:hover {
+    color: #8bc98f;
+}
+
+.dark {
+    background: #111;
+    color: white;
+}
+
+.dark header{
+    background: linear-gradient(135deg, #1a2a1d, #2b1d2f);
+    border-bottom: none;
+}
+
+.dark article {
+    background: linear-gradient(135deg, #1a2a1d, #2b1d2f);
+}
+
+.dark article{
+    border: 1px solid #333;
+}
+
+.dark article:hover{
+    border-color: #8bc98f;
+    box-shadow: 0 12px 25px rgba(139, 201, 143, 0.25);
+}
+
+
+.dark > .hero {
+    background:
+    linear-gradient(
+        rgba(10,10,10,0.72),
+        rgba(20,20,20,0.78)
+    ),
+    url("../img/background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.dark > .hero > p {
+    color: #ccc;
+}
+
+.dark header button {
+    background: transparent;
+    color: #c8ffd0;
+    box-shadow: none;
+}
+
+.dark footer {
+    background: linear-gradient(135deg, #1a2a1d, #2b1d2f);
+}
+
+.dark .footer-column p,
+.dark .footer-brand p,
+.dark .footer-bottom p {
+    color: #ccc;
+}
+
+.dark .footer-bottom {
+    border-top: 1px solid #444;
+}
+
+.dark .cta-section{
+    border-color: #8bc98f;
+    background: linear-gradient(135deg, #1a2a1d, #2b1d2f);
+    border: 1px solid #333;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+
+.dark .cta-section p{
+    color: #ccc;
+}
+
+.dark .cta-section:hover{
+    box-shadow: 0 25px 45px rgba(139, 201, 143, 0.2);
+}
+
+.dark .featured-section img:hover{
+    box-shadow: 0 25px 45px rgba(139, 201, 143, 0.2);
+}
+
+.dark .menu-item img:hover{
+    box-shadow: 0 25px 45px rgba(139, 201, 143, 0.2);
+}
+
+.dark .popup-message{
+    background: rgba(25,25,25,0.95);
+    color: white;
+    border: 1px solid #333;
+}
+
+.dark .popup-message p{
+    color: #ddd;
+}
+
+
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+MX+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<section id="popup-message" class="popup-message">
+    <button class="close-popup" onclick="closePopup()">×</button>
+
+    <h3>🍵 Welcome to Wittycha Menu</h3>
+
+    <p>
+        Discover your favorite creamy matcha,
+        cute merchandise, and special picks made just for you ✨
+    </p>
+
+    <a href="#product" onclick="closePopup()">Explore Menu</a>
+</section>
+
+<header>
+
+    <h1>Wittycha.id</h1>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">Product</a>
+        <a href="#">About</a>
+        <a href="#">Our Story</a>
+        <a href="#">Gallery</a>
+    </nav>
+    <button onclick="toggleDark()">🌙</button>
+</header>
+
+
+<section id="home" class="hero">
+    <section class="floating-icons">
+    <span>🍵</span>
+    <span>💚</span>
+    <span>🍃</span>
+    <span>🌿</span>
+    <span>⭐</span>
+    <span>✨</span>
+    <span>🎀</span>
+    <span>☁️</span>
+    </section>
+        <img class="logo" src="../img/logo.webp" alt="">
+        <h2>Our Special Items 🌷</h2>
+        <p>Choose your Special Items ✨</p>
+        <a href="#product" class="btn">Explore</a>
+</section>
+
+
+<section id="product" class="menu-section fade">
+    <h2 class="menu-title">Our Special Items ✨</h2>
+
+    <section class="menu-item">
+        <img src="https://scoopyscoopz.com/cdn/shop/files/IMG-3919.heic?v=1761063294&width=1946" alt="Witty Surprise Box">
+        <section class="menu-content">
+            <span class="badge">Best Seller</span>
+            <h2>Witty Surprise Box🎁</h2>
+            <h3>Rp 49.000</h3>
+            <p>Kotak kejutan spesial berisi berbagai item cute dan aesthetic yang dipilih secara acak untuk memberikan pengalaman unboxing yang seru dan menyenangkan. Mulai dari photocard, sticker, keychain, hingga merchandise lucu lainnya, setiap box menyimpan kejutan yang berbeda dan siap membuat harimu lebih berwarna. Cocok untuk kamu yang suka surprise, mengoleksi merchandise, atau mencari little happiness dalam satu paket istimewa.</p>
+            <a href="https://wa.me/62812345678910?text=Halo%20Wittycha%20👋%0ASaya%20mau%20pesan%20Witty%20Surprise%20Box🎁" class="detail-btn">Order Now</a>
+        </section>
+    </section>
+
+    <section class="menu-item reverse">
+        <img src="https://bokksuboutique.com/cdn/shop/files/BTQ_2509_AutumnDrop_SM1205_MatchaMomentsBox_CloseUp_2000x2000_4b708aa2-b01f-4c7e-a9ce-5defee82e915.jpg?v=1757913418&width=620" alt="Matcha Gift Box">
+        <section class="menu-content">
+            <span class="badge">Customer Favorite</span>
+            <h2>Matcha Gift Box💚</h2>
+            <h3>Rp 89.000</h3>
+            <p>Paket spesial berisi pilihan produk dan merchandise favorit bertema matcha yang dirancang untuk menghadirkan pengalaman yang manis dan berkesan. Dikemas dengan cantik dan penuh sentuhan aesthetic, gift box ini cocok untuk hadiah ulang tahun, perayaan spesial, atau sekadar bentuk apresiasi untuk orang tersayang. Perpaduan minuman, merchandise, dan kejutan kecil di dalamnya menjadikan setiap unboxing terasa lebih hangat dan istimewa.</p>
+            <a href="https://wa.me/62812345678910?text=Halo%20Wittycha%20👋%0ASaya%20mau%20pesan%20Matcha%20Gift%Box💚" class="detail-btn">Order Now</a>
+        </section>
+    </section>
+
+
+    <section class="menu-item">
+        <img src="https://static.mercdn.net/item/detail/orig/photos/m80447905146_5.jpg?1750251287" alt="Idol Birthday Package">
+        <section class="menu-content">
+            <span class="badge">Sweet & Fresh</span>
+            <h2>Idol Birthday Package 🎂</h2>
+            <h3>Rp 120.000</h3>
+            <p>Paket spesial yang dirancang untuk merayakan hari ulang tahun idol favoritmu dengan cara yang lebih seru dan berkesan. Berisi kombinasi minuman, merchandise, dan dekorasi bertema yang cocok untuk birthday café event, fangirling session, atau merayakan momen spesial bersama sesama fans. Dikemas dengan sentuhan cute dan aesthetic, package ini siap membuat perayaan ulang tahun bias-mu terasa lebih meriah, hangat, dan penuh kenangan.</p>
+            <a href="https://wa.me/62812345678910?text=Halo%20Wittycha%20👋%0ASaya%20mau%20pesan%20Idol%20Birthday%20Package🎂" class="detail-btn">Order Now</a>
+        </section>
+    </section>
+
+    <section class="menu-item reverse">
+        <img src="https://thumbs.dreamstime.com/b/two-cups-matcha-latte-cute-art-top-view-green-lattes-wooden-table-one-smiling-face-heart-design-419964574.jpg" alt="Couple Matcha Set">
+        <section class="menu-content">
+            <span class="badge">Refreshing</span>
+            <h2>Couple Matcha Set 🍵</h2>
+            <h3>Rp 75.000</h3>
+            <p>Paket spesial berisi dua pilihan minuman matcha yang sempurna untuk dinikmati bersama orang tersayang. Dirancang untuk menciptakan momen hangat dan berkesan, set ini cocok untuk quality time, casual date, atau sekadar menikmati obrolan santai sambil menyeruput matcha favorit. Dengan perpaduan rasa yang creamy, comforting, dan penuh kehangatan, setiap tegukan terasa lebih istimewa saat dibagikan bersama.</p>
+            <a href="https://wa.me/62812345678910?text=Halo%20Wittycha%20👋%0ASaya%20mau%20pesan%20Couple%20Matcha%20Set🍵" class="detail-btn">Order Now</a>
+        </section>
+    </section>
+
+    <section class="menu-item">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r990-lwzi8c3phq5oe7" alt="Matcha Dessert Box">
+        <section class="menu-content">
+            <span class="badge">Signature</span>
+            <h2>Matcha Dessert Box 🍰</h2>
+            <h3>Rp 45.000</h3>
+            <p>Dessert box creamy dengan perpaduan lembut antara matcha premium, lapisan cake yang moist, dan krim yang ringan di setiap sendokannya. Menghadirkan rasa manis yang pas dengan sentuhan earthy khas matcha, menciptakan dessert yang rich, comforting, dan bikin susah berhenti makan. Cocok untuk menemani me time, belajar, atau sebagai sweet treat untuk memperbaiki mood harimu.</p>
+            <a href="https://wa.me/62812345678910?text=Halo%20Wittycha%20👋%0ASaya%20mau%20pesan%20Matcha%20Dessert%20Box🍰" class="detail-btn">Order Now</a>
+        </section>
+    </section>
+</section>
+
+<!-- <section class="category-section fade">
+
+    <h2>Menu Categories ✨</h2>
+
+    <section class="category-grid">
+
+        <article class="category-card">
+            <h3>🍵 Matcha Drinks</h3>
+            <p>
+                Creamy, calming, and freshly whisked for your cozy moments.
+            </p>
+        </article>
+
+        <article class="category-card">
+            <h3>🎀 Merchandise</h3>
+            <p>
+                Cute photocards, stickers, and little things to brighten your day.
+            </p>
+        </article>
+
+        <article class="category-card">
+            <h3>✨ Special Items</h3>
+            <p>
+                Seasonal menu and limited edition picks only at Wittycha.
+            </p>
+        </article>
+
+    </section>
+
+</section>
+
+<section class="menu-slider-section fade">
+
+    <h2>Explore Our Full Menu 🍵</h2>
+
+    <section id="MatchaDrinks">
+    <h3 class="slider-title">🍵 Matcha Drinks</h3>
+
+    <section class="slider-wrapper">
+
+        <button class="slide-btn prev">
+            ❮
+        </button>
+
+        <section class="menu-slider">
+
+            <article class="slider-card">
+                <img src="../img/latte.webp" alt="Matcha Latte">
+                <h4>Matcha Latte</h4>
+                <p>Rp 30.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="../img/cream.webp" alt="Matcha Cream">
+                <h4>Matcha Cream</h4>
+                <p>Rp 35.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://www.siftandsimmer.com/wp-content/uploads/2024/06/IMG_3139-featured.jpg" alt="Strawberry Matcha">
+                <h4>Strawberry Matcha</h4>
+                <p>Rp 38.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://kissatea.com/cdn/shop/files/IMG_0631.heic?v=1761305016&width=3024" alt="Iced Matcha Float">
+                <h4>Iced Matcha Float</h4>
+                <p>Rp 40.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://138092681.cdn6.editmysite.com/uploads/1/3/8/0/138092681/FYPKEG4MXXYI7AOFDLAGA6JD.jpeg" alt="Dirty Matcha">
+                <h4>Dirty Matcha</h4>
+                <p>Rp 36.000</p>
+            </article>
+
+
+        </section>
+
+        <button class="slide-btn next">
+            ❯
+        </button>
+
+    </section>
+    </section>
+
+
+    <section id="Merch">
+    <h3 class="slider-title">🎀 Merchandise</h3>
+
+    <section class="slider-wrapper">
+
+        <button class="slide-btn prev">
+            ❮
+        </button>
+
+        <section class="menu-slider">
+
+            <article class="slider-card">
+                <img src="../img/photocard.webp" alt="Photocard Set">
+                <h4>Photocard Set</h4>
+                <p>Rp 15.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://i.pinimg.com/736x/a6/f7/f3/a6f7f3aa2d3c20a5a641d16c340053f9.jpg" alt="Sticker Pack">
+                <h4>Sticker Pack</h4>
+                <p>Rp 10.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://id-live-01.slatic.net/p/ff51da3a3e9b00b42f479b4896707f09.jpg" alt="Keychain">
+                <h4>Keychain</h4>
+                <p>Rp 20.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98x-luw8kap4b1c959" alt="Photocard Holder">
+                <h4>Photocard Holder</h4>
+                <p>Rp 35.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://sg-test-11.slatic.net/p/76a66620534fde62fc47a431259da7bb.jpg" alt="Mini Plushie">
+                <h4>Mini Plushie</h4>
+                <p>Rp 40.000</p>
+            </article>
+
+
+        </section>
+
+        <button class="slide-btn next">
+            ❯
+        </button>
+
+    </section>
+
+    <h3 class="slider-title">✨ Special Items</h3>
+
+    <section class="slider-wrapper">
+
+        <button class="slide-btn prev">
+            ❮
+        </button>
+
+        <section class="menu-slider">
+
+            <article class="slider-card">
+                <img src="https://scoopyscoopz.com/cdn/shop/files/IMG-3919.heic?v=1761063294&width=1946" alt="Witty Surprise Box">
+                <h4>Witty Surprise Box</h4>
+                <p>Rp 49.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://bokksuboutique.com/cdn/shop/files/BTQ_2509_AutumnDrop_SM1205_MatchaMomentsBox_CloseUp_2000x2000_4b708aa2-b01f-4c7e-a9ce-5defee82e915.jpg?v=1757913418&width=620" alt="Matcha Gift Box">
+                <h4>Matcha Gift Box</h4>
+                <p>Rp 89.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://static.mercdn.net/item/detail/orig/photos/m80447905146_5.jpg?1750251287" alt="Idol Birthday Package">
+                <h4>Idol Birthday Package</h4>
+                <p>Rp 120.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://thumbs.dreamstime.com/b/two-cups-matcha-latte-cute-art-top-view-green-lattes-wooden-table-one-smiling-face-heart-design-419964574.jpg" alt="Couple Matcha">
+                <h4>Couple Matcha Set</h4>
+                <p>Rp 75.000</p>
+            </article>
+
+            <article class="slider-card">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7r990-lwzi8c3phq5oe7" alt="Matcha Dessert Box">
+                <h4>Matcha Dessert Box</h4>
+                <p>Rp 45.000</p>
+            </article>
+        </section>
+
+        <button class="slide-btn next">
+            ❯
+        </button>
+
+    </section>
+</section>
+
+<section class="featured-section fade">
+
+    <section class="featured-content">
+
+        <p class="featured-mini">
+            Featured This Week ✨
+        </p>
+
+        <h2>
+            Matcha Cream <br>
+            Everyone’s Favorite 💚
+        </h2>
+
+        <p>
+            Our creamy matcha topped with soft foam
+            has become the most loved comfort drink this week.
+        </p>
+
+        <a href="https://wa.me/62812345678910?text=Halo%20Wittycha%20👋%0ASaya%20mau%20pesan%20Matcha%20Cream%20💚" class="detail-btn" target="_blank">Try It Now</a>
+
+    </section>
+
+    <img src="../img/cream.webp" alt="Featured Product">
+
+</section>
+
+<section class="pairing-section fade">
+
+    <h2>Perfect Pairings 🍵</h2>
+
+    <section class="pairing-grid">
+
+        <article class="pair-card funny-card">
+            <section class="pair-item left">
+                🍵
+                <h3>Matcha Latte</h3>
+            </section>
+
+            <section class="heart">
+                💚
+            </section>
+
+            <section class="pair-item right">
+                ⭐ 
+                <h3>Matcha Gift Box</h3>
+            </section>
+
+            <p class="match-text">IT'S A MATCH ✨</p>
+        </article>
+
+
+        <article class="pair-card funny-card">
+            <section class="pair-item left">
+                💚
+                <h3>Matcha Cream</h3>
+            </section>
+
+            <section class="heart">
+                🎀
+            </section>
+
+            <section class="pair-item right">
+                ✨
+                <h3>Photocard Set</h3>
+            </section>
+
+            <p class="match-text">Soulmate Combo 😭</p>
+        </article>
+
+    </section>
+
+</section>
+
+</section> -->
+
+<section class="cta-section fade">
+
+    <h2>
+        Ready for Your Matcha Break? 💚
+    </h2>
+
+    <p>
+        Come enjoy cozy drinks, cute merch,
+        and comforting moments with Wittycha.
+    </p>
+
+    <a href="https://wa.me/62812345678910?text=Halo%20Wittycha%20👋💚%0ASaya%20mau%20pesan" class="detail-btn" target="_blank">Order Now</a>
+
+</section>
+
+
+
+<footer>
+    <section class="footer-grid">
+        <section>
+            <img class="footerlogo" src="../img/logo.webp" alt="Logofooter">
+            <h2>Wittycha 💚</h2>
+            <p>Your Safe Place for Matcha & K-pop Happiness✨</p>
+        </section>
+
+        <section>
+            <h3>Store</h3>
+            <p>Pontianak</p>
+            <p>09.00 - 21.00</p>
+        </section>
+
+        <section>
+            <h3>Contact us</h3>
+            <h4>Whatsapp</h4>
+            <p>+62 812-3456-78910</p>
+            <h4>Email</h4>
+            <p>Wittycha@gmail.com</p>
+        </section>
+
+        <section>
+            <h3>Information</h3>
+            <p>Our Story</p>
+            <p>Gallery</p>
+        </section>
+
+        <section class="socialmedia">
+            <h3>Social Media</h3>
+            <section class="logososialmedia">
+                <img class="sociallogoig" src="../img/logoig.webp" alt="logoig">
+                <img class="sociallogo" src="../img/logotiktok.webp" alt="logotiktok">
+            </section>
+                
+            </section>
+        </section>
+    </section>
+
+    <section class="footer-bottom">
+        <p>Copyright ©2026 Wittycha.id. All Rights Reserved.</p>
+    </section>
+</footer>
+
+<script>
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e){
+        if(this.getAttribute("href").startsWith("#")){
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href"))
+            .scrollIntoView({behavior: "smooth"});
+        }
+    });
+});
+
+
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+
+
+const elements = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+    elements.forEach(el => {
+        if(el.getBoundingClientRect().top < window.innerHeight - 50){
+            el.classList.add("show");
+        }
+    });
+});
+
+const wrappers = document.querySelectorAll(".slider-wrapper");
+
+wrappers.forEach(wrapper => {
+
+    const slider = wrapper.querySelector(".menu-slider");
+
+    const prev = wrapper.querySelector(".prev");
+    const next = wrapper.querySelector(".next");
+
+    next.addEventListener("click", () => {
+        slider.scrollBy({
+            left: 320,
+            behavior: "smooth"
+        });
+    });
+
+    prev.addEventListener("click", () => {
+        slider.scrollBy({
+            left: -320,
+            behavior: "smooth"
+        });
+    });
+
+});
+
+window.addEventListener("load", function(){
+    setTimeout(function(){
+        document
+            .getElementById("popup-message")
+            .classList.add("show");
+    }, 1200);
+});
+
+function closePopup(){
+    document
+        .getElementById("popup-message")
+        .classList.remove("show");
+}
+
+
+</script>
+
+</body>
+</html>

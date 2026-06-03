@@ -218,10 +218,10 @@
     
     <nav>
         <a href="#home">Home</a>
-        <a href="/product/">Product</a>
-        <a href="#">About</a>
-        <a href="#">Our Story</a>
-        <a href="#">Gallery</a>
+        <a href="product/index.html">Product</a>
+        <a href="about/index.html">About</a>
+        <a href="ourstory/index.html">Our Story</a>
+        <a href="gallery/index.html">Gallery</a>
     </nav>
     <button onclick="toggleDark()">🌙</button>
 </header>
@@ -294,7 +294,7 @@
             <p>Your little comfort zone for healing & fangirling.</p>
         </article>
     </section>
-    <a href="#" class="detail-btn">Lihat Selengkapnya →</a>
+    <a href="about/index.html" class="detail-btn">Lihat Selengkapnya →</a>
 </section>
 
 
@@ -306,7 +306,7 @@
             <p>Semua berawal dari kecintaan kami pada dua hal: segelas matcha yang creamy dan segala sesuatu yang membuat kita tersenyum saat melihatnya. Kami percaya bahwa kebahagiaan itu sederhana, bisa datang dari aroma matcha yang menenangkan atau dari sebuah barang lucu yang menemani hari-harimu. Di WittyCha, kami menggabungkan rasa dan benda-benda paling menggemaskan untuk menjadi penghibur di tengah sibuknya harimu. Selamat datang di rumah kecil kami yang penuh warna!</p>
         </article>
     </section>
-    <a href="#" class="detail-btn">Lihat Selengkapnya →</a>
+    <a href="ourstory/index.html" class="detail-btn">Lihat Selengkapnya →</a>
 </section>        
 
 <section class="review-section">
@@ -390,6 +390,27 @@
 </footer>
 </body>
 
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Wittycha.id",
+        "image": "",
+        "@id": "",
+        "url": "https://wittychaid.vercel.app/",
+        "telephone": "0812345678910",
+        "priceRange": "10000 - 120000",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hos Cokroaminoto",
+            "addressLocality": "Pontianak",
+            "addressRegion": "KB",
+            "postalCode": "78117",
+            "addressCountry": "ID"
+        }
+    }
+    </script>
+    
 <script>
 document.querySelectorAll("a").forEach(link=>{link.addEventListener("click",function(e){if(this.getAttribute("href").startsWith("#")){e.preventDefault();document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"})}})});function toggleDark(){document.body.classList.toggle("dark")}
 const elements=document.querySelectorAll(".fade");window.addEventListener("scroll",()=>{elements.forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-50){el.classList.add("show")}})});const track=document.querySelector(".review-track");track.innerHTML+=track.innerHTML;let position=0;const speed=0.5;function animate(){position+=speed;if(position>=track.scrollWidth/2){position-=track.scrollWidth/2}

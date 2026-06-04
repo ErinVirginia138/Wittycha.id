@@ -391,25 +391,19 @@
 </body>
 
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Wittycha.id",
-        "image": "",
-        "@id": "",
-        "url": "https://wittychaid.vercel.app/",
-        "telephone": "0812345678910",
-        "priceRange": "10000 - 120000",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Hos Cokroaminoto",
-            "addressLocality": "Pontianak",
-            "addressRegion": "KB",
-            "postalCode": "78117",
-            "addressCountry": "ID"
-        }
-    }
-    </script>
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Wittycha.id",
+    "url": "https://wittychaid.vercel.app/",
+    "logo": "https://wittychaid.vercel.app/img/logo.webp",
+    "description": "Matcha cafe and merchandise destination offering premium matcha drinks, cute collectibles, and cozy experiences.",
+    "sameAs": [
+        "https://instagram.com/wittycha.id",
+        "https://tiktok.com/@wittycha.id"
+    ]
+}
+</script>
     
 <script>
 document.querySelectorAll("a").forEach(link=>{link.addEventListener("click",function(e){if(this.getAttribute("href").startsWith("#")){e.preventDefault();document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"})}})});function toggleDark(){document.body.classList.toggle("dark")}

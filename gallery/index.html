@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Cafe matcha aesthetic di Pontianak dengan menu matcha creamy, photocard lucu, dan tempat nongkrong cozy ala K-pop hanya di Wittycha.id.">
+<meta name="keywords" content="cafe matcha pontianak, matcha creamy, cafe aesthetic, photocard cafe, tempat nongkrong pontianak, cafe kpop, wittycha, matcha latte, cozy cafe, cafe healing">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+<title>Gallery of Wittycha.id</title>
+
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f8fbf8;
+    color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #eee;
+}
+
+header > h1 {
+    font-family: 'Dancing Script';
+}
+
+header > button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #2e7d32;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.beginning{
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2;
+    color: #666;
+}
+
+.about-highlight{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+
+    margin-top: 70px;
+}
+
+.highlight-card{
+    background: white;
+    padding: 35px;
+    border-radius: 28px;
+    text-align: center;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.highlight-card:hover{
+    transform: translateY(-10px);
+}
+
+.highlight-card span{
+    font-size: 48px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.highlight-card h3{
+    margin-bottom: 12px;
+}
+
+.highlight-card p{
+    color: #666;
+    line-height: 1.8;
+}
+
+.hero{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    padding: 40px;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,0.78),
+        rgba(255,245,250,0.78)
+    ),
+
+    url("../img/background.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    backdrop-filter: blur(2px);
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(139,201,143,0.15),
+    transparent 30%);
+
+    z-index:0;
+}
+
+.floating-icons span{
+    position: absolute;
+    top: -100px;
+
+    font-size: 28px;
+    opacity: 0.7;
+
+    animation: falling linear infinite;
+}
+
+
+.floating-icons span:nth-child(1){
+    left: 10%;
+    animation-duration: 9s;
+}
+
+.floating-icons span:nth-child(2){
+    left: 25%;
+    animation-duration: 13s;
+}
+
+.floating-icons span:nth-child(3){
+    left: 40%;
+    animation-duration: 11s;
+}
+
+.floating-icons span:nth-child(4){
+    left: 60%;
+    animation-duration: 15s;
+}
+
+.floating-icons span:nth-child(5){
+    left: 80%;
+    animation-duration: 10s;
+}
+
+.floating-icons span:nth-child(6){
+    left: 92%;
+    animation-duration: 14s;
+}
+
+.floating-icons span:nth-child(7){
+    left: 55%;
+    animation-duration: 12s;
+}
+
+.floating-icons span:nth-child(8){
+    left: 75%;
+    animation-duration: 16s;
+}
+
+.floating-icons span:nth-child(odd){
+    opacity: 0.5;
+}
+
+.floating-icons span:nth-child(even){
+    opacity: 0.8;
+}
+
+@keyframes falling{
+
+    from{
+        transform: translateY(-100px) rotate(0deg);
+    }
+
+    to{
+        transform: translateY(110vh) rotate(360deg);
+    }
+
+}
+
+.special-section{
+    text-align:center;
+    padding:120px 60px;
+}
+
+.special-mini{
+    text-align: center;
+    color:#2e7d32;
+    font-weight:600;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.special-section h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.special-desc{
+    max-width:750px;
+    margin:0 auto 60px;
+    color:#666;
+    line-height:1.8;
+}
+
+.special-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.special-card{
+    background:white;
+    padding:40px 30px;
+    border-radius:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.special-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 18px 35px rgba(0,0,0,0.12);
+}
+
+.special-icon{
+    font-size:50px;
+    display:block;
+    margin-bottom:20px;
+
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+.special-card h3{
+    margin-bottom:15px;
+}
+
+.special-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+@keyframes floatIcon{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+@media(max-width:900px){
+
+    .special-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.special-count{
+    
+    display: block;
+    width: fit-content;
+    margin: 0 auto 25px;
+
+    padding: 10px 22px;
+
+    background: rgba(139,201,143,0.15);
+    color: #2e7d32;
+
+    border: 1px solid rgba(46,125,50,0.15);
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.special-count:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(46,125,50,0.12);
+}
+
+.special-count{
+    animation: glowCount 3s ease-in-out infinite;
+}
+
+@keyframes glowCount{
+
+    0%,100%{
+        box-shadow: 0 0 0 rgba(46,125,50,0);
+    }
+
+    50%{
+        box-shadow: 0 0 20px rgba(46,125,50,0.15);
+    }
+}
+
+.funfacts-section{
+    text-align:center;
+    padding:120px 60px;
+}
+
+.funfacts-section h2{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.funfacts-desc{
+    max-width:700px;
+    margin:0 auto 60px;
+    color:#666;
+    line-height:1.8;
+}
+
+.funfacts-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.funfact-card{
+    background:white;
+    padding:45px 25px;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.funfact-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 35px rgba(0,0,0,0.12);
+}
+
+.funfact-card h3{
+    font-size:52px;
+    color:#2e7d32;
+    margin-bottom:12px;
+}
+
+.funfact-card p{
+    color:#666;
+    font-weight:500;
+}
+
+.funfact-card::before{
+    content:"";
+    position:absolute;
+
+    top:-50px;
+    right:-50px;
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:rgba(139,201,143,0.08);
+}
+
+@media(max-width:900px){
+
+    .funfacts-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .funfacts-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+.mascot-section{
+    margin-top:140px;
+    text-align:center;
+}
+
+.mascot-desc{
+    max-width:750px;
+    margin:20px auto 60px;
+    line-height:1.8;
+    color:#666;
+}
+
+.menu-section{
+    padding: 100px 60px;
+}
+
+.menu-title{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+
+.detail-btn{
+    display: inline-block;
+    padding: 14px 28px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.detail-btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(46,125,50,0.25);
+}
+
+.hero img,
+.hero h2,
+.hero p,
+.hero .btn{
+    position: relative;
+    z-index: 2;
+}
+
+.logo{
+    width: min(250px, 30vw);
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 45px;
+}
+
+.hero p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(46,125,50,0.25);
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(46,125,50,0.35);
+}
+
+section {
+    padding: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+}
+
+article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    padding-bottom: 20px;
+}
+
+article h3,
+article h4,
+article p{
+    padding: 0 10px;
+}
+
+.product{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+footer {
+    background: linear-gradient(135deg, #eaf4ec, #fff0f5);
+    padding: 40px;
+    margin-top: 120px;
+}
+
+.footerlogo{
+    width: 20dvw;
+}
+
+.sociallogo{
+    width: 40px;
+    cursor: pointer;
+}
+
+.sociallogoig{
+    width: 50px;
+    cursor: pointer;
+}
+
+.logososialmedia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+footer section {
+    padding: 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+
+.milestone-section{
+    max-width: 1000px;
+    margin: 120px auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+.milestone-section h2{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 90px;
+}
+
+.timeline{
+    position: relative;
+    z-index: 2;
+}
+
+.timeline::before{
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: #8bc98f;
+
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+
+    border-radius: 10px;
+
+    animation: growLine 2s ease forwards;
+}
+
+@keyframes growLine{
+
+    to{
+        transform: translateX(-50%) scaleY(1);
+    }
+
+}
+
+
+.timeline-item{
+    width: 50%;
+    padding: 20px 40px;
+    position: relative;
+
+    opacity: 0;
+}
+
+.timeline-item:nth-child(odd){
+    left: 0;
+    text-align: right;
+
+    animation: slideLeft .8s ease forwards;
+}
+
+.timeline-item:nth-child(even){
+    left: 50%;
+    text-align: left;
+
+    animation: slideRight .8s ease forwards;
+}
+
+
+.timeline-item:nth-child(1){
+    animation-delay: .2s;
+}
+
+.timeline-item:nth-child(2){
+    animation-delay: .4s;
+}
+
+.timeline-item:nth-child(3){
+    animation-delay: .6s;
+}
+
+.timeline-item:nth-child(4){
+    animation-delay: .8s;
+}
+
+.timeline-item:nth-child(5){
+    animation-delay: 1s;
+}
+
+.timeline-item:nth-child(6){
+    animation-delay: 1.2s;
+}
+
+.timeline-card{
+    background: white;
+    padding: 28px;
+    border-radius: 28px;
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+
+    transition: .35s;
+}
+
+.timeline-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.timeline-card h3{
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.timeline-card p{
+    line-height: 1.8;
+    color: #666;
+}
+
+
+.timeline-year{
+    display: inline-block;
+
+    padding: 8px 22px;
+
+    background: #2e7d32;
+    color: white;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+
+.timeline-dot{
+    position: absolute;
+    top: 35px;
+
+    width: 20px;
+    height: 20px;
+
+    background: #2e7d32;
+
+    border-radius: 50%;
+    border: 4px solid white;
+
+    animation: pulseDot 2s infinite;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot{
+    right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+    left: -10px;
+}
+
+@keyframes pulseDot{
+
+    0%{
+        box-shadow: 0 0 0 0 rgba(139,201,143,0.5);
+    }
+
+    70%{
+        box-shadow: 0 0 0 14px rgba(139,201,143,0);
+    }
+
+    100%{
+        box-shadow: 0 0 0 0 rgba(139,201,143,0);
+    }
+
+}
+
+
+@keyframes slideLeft{
+
+    from{
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes slideRight{
+
+    from{
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .milestone-section h2{
+        font-size: 38px;
+    }
+
+    .timeline::before{
+        left: 20px;
+    }
+
+    .timeline-item{
+        width: 100%;
+        left: 0 !important;
+
+        padding-left: 60px;
+        padding-right: 10px;
+
+        text-align: left !important;
+    }
+
+    .timeline-dot{
+        left: 10px !important;
+        right: auto !important;
+    }
+
+    .timeline-card{
+        padding: 22px;
+    }
+
+}
+
+.future-section{
+    max-width: 1200px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.future-mini{
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    background: rgba(139,201,143,0.15);
+    color: #2e7d32;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.future-section h2{
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.future-desc{
+    max-width: 760px;
+    margin: 0 auto 60px;
+
+    line-height: 1.9;
+    color: #666;
+}
+
+.future-goals{
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+
+.goal-card{
+    width: 280px;
+
+    background: white;
+    padding: 35px 25px;
+
+    border-radius: 30px;
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    transition: 0.4s;
+}
+
+.goal-card:hover{
+    transform: translateY(-10px);
+}
+
+.goal-card span{
+    font-size: 42px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.goal-card h3{
+    margin-bottom: 12px;
+}
+
+.goal-card p{
+    color: #666;
+    line-height: 1.7;
+}
+
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.dark .goal-card{
+    background: linear-gradient(135deg,#1a2a1d,#2b1d2f);
+    border: 1px solid #333;
+}
+
+.dark .goal-card p{
+    color: #ccc;
+}
+
+.dark .mascot-card{
+    background:linear-gradient(
+        135deg,
+        #1a2a1d,
+        #2b1d2f
+    );
+
+    border:1px solid #333;
+}
+
+.dark .mascot-card p{
+    color:#ccc;
+}
+
+.dark .mascot-image{
+    background:linear-gradient(
+        135deg,
+        #1a2a1d,
+        #2b1d2f
+    );
+}
+
+.dark .highlight-card{
+    background: linear-gradient(
+        135deg,
+        #1a2a1d,
+        #2b1d2f
+    );
+    border: 1px solid #333;
+}
+
+.dark .highlight-card p{
+    color: #ddd;
+}
+
+.dark .timeline-card{
+    background: linear-gradient(
+        135deg,
+        #1a2a1d,
+        #2b1d2f
+    );
+
+    border: 1px solid #333;
+}
+
+.dark .timeline-card p{
+    color: #ddd;
+}
+
+.dark .timeline::before{
+    background: #8bc98f;
+}
+
+.dark .timeline-year{
+    background: #8bc98f;
+    color: #111;
+}
+
+.dark .special-card{
+    background: linear-gradient(
+        135deg,
+        #1a2a1d,
+        #2b1d2f
+    );
+
+    border: 1px solid #333;
+}
+
+.dark .special-card p{
+    color: #ddd;
+}
+
+.dark .special-desc{
+    color: #ccc;
+}
+
+@media(max-width:768px){
+
+    .special-section{
+        padding: 100px 25px;
+    }
+
+    .special-section h2{
+        font-size: 38px;
+    }
+
+}
+
+.dark .special-count{
+    background: rgba(139,201,143,0.12);
+    color: #8bc98f;
+    border: 1px solid rgba(139,201,143,0.2);
+}
+
+
+.dark nav a {
+    color: #ddd;
+}
+
+.dark nav a:hover {
+    color: #8bc98f;
+}
+
+.dark {
+    background: #111;
+    color: white;
+}
+
+.dark header{
+    background: linear-gradient(135deg, #1a2a1d, #2b1d2f);
+    border-bottom: none;
+}
+
+.dark article {
+    background: linear-gradient(135deg, #1a2a1d, #2b1d2f);
+}
+
+.dark article{
+    border: 1px solid #333;
+}
+
+.dark article:hover{
+    border-color: #8bc98f;
+    box-shadow: 0 12px 25px rgba(139, 201, 143, 0.25);
+}
+
+
+.dark > .hero {
+    background:
+    linear-gradient(
+        rgba(10,10,10,0.72),
+        rgba(20,20,20,0.78)
+    ),
+    url("../img/background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.dark > .hero > p {
+    color: #ccc;
+}
+
+.dark header button {
+    background: transparent;
+    color: #c8ffd0;
+    box-shadow: none;
+}
+
+.dark footer {
+    background: linear-gradient(135deg, #1a2a1d, #2b1d2f);
+}
+
+.dark .footer-column p,
+.dark .footer-brand p,
+.dark .footer-bottom p {
+    color: #ccc;
+}
+
+.dark .footer-bottom {
+    border-top: 1px solid #444;
+}
+
+.story-hero{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+.story-mini,
+.story-tag{
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:rgba(139,201,143,0.15);
+    color:#2e7d32;
+
+    border-radius:999px;
+
+    font-size:14px;
+    font-weight:600;
+
+    letter-spacing:1px;
+}
+
+.story-hero h1{
+    font-size:64px;
+    margin:25px 0;
+}
+
+.story-hero p{
+    color:#666;
+    line-height:1.9;
+}
+
+.story-block{
+    max-width:900px;
+    margin:100px auto;
+    text-align:center;
+}
+
+.story-block h2{
+    font-size:48px;
+    margin:25px 0;
+}
+
+.story-block p{
+    line-height:1.9;
+    color:#666;
+}
+
+.experience-section{
+    max-width:1100px;
+    margin:120px auto;
+    text-align:center;
+}
+
+.experience-section h2{
+    font-size:48px;
+    margin:25px 0 60px;
+}
+
+.experience-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.experience-card{
+    background:white;
+    padding:35px;
+    border-radius:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:.4s;
+}
+
+.experience-card:hover{
+    transform:translateY(-10px);
+}
+
+.experience-card span{
+    font-size:42px;
+}
+
+.experience-card h3{
+    margin:15px 0;
+}
+
+.story-name{
+    max-width:850px;
+    margin:120px auto;
+    text-align:center;
+}
+
+.story-name h2{
+    font-size:48px;
+    margin:25px 0;
+}
+
+.story-name p{
+    line-height:1.9;
+    color:#666;
+}
+
+.letter-section{
+    max-width:850px;
+    margin:120px auto;
+    text-align:center;
+}
+
+.letter-section h2{
+    font-size:48px;
+    margin:25px 0;
+}
+
+.letter-section p{
+    line-height:2;
+    color:#666;
+    margin-bottom:40px;
+}
+
+.letter-section h3{
+    color:#2e7d32;
+    font-size:28px;
+}
+
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+MX+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>Wittycha.id</h1>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../product/index.html">Product</a>
+        <a href="index.html">About</a>
+        <a href="../ourstory/index.html">Our Story</a>
+        <a href="../gallery/index.html">Gallery</a>
+    </nav>
+    <button onclick="toggleDark()">🌙</button>
+</header>
+
+
+<section id="home" class="hero">
+    <section class="floating-icons">
+    <span>🍵</span>
+    <span>💚</span>
+    <span>🍃</span>
+    <span>🌿</span>
+    <span>⭐</span>
+    <span>✨</span>
+    <span>🎀</span>
+    <span>☁️</span>
+    </section>
+        <img class="logo" src="../img/logo.webp" alt="">
+        <h2>Story of WittyCha💚</h2>
+        <p>Where Matcha Meets Comfort 🍵</p>
+        <a href="#story" class="btn">Explore</a>
+</section>
+
+
+
+<section class="story-hero fade">
+
+    <p class="story-mini">
+        OUR STORY 💚
+    </p>
+
+    <h1>
+        Every Cup Has A Story
+    </h1>
+
+    <p>
+        What started as a simple love for matcha and comforting moments
+        slowly became a dream to create a place where everyone feels welcome.
+    </p>
+
+</section>
+
+
+<section class="story-block fade">
+
+    <section class="story-text">
+
+        <p class="story-tag">🌱 THE BEGINNING</p>
+
+        <h2>Where It All Started</h2>
+
+        <p>
+            Wittycha began with a simple idea: creating a cozy destination
+            where people could enjoy premium matcha while feeling relaxed,
+            inspired, and at home.
+
+            We wanted to build something more than just a café.
+            A place where small moments become memorable experiences,
+            where every drink feels comforting, and where happiness can
+            be found in the little things.
+        </p>
+
+    </section>
+
+</section>
+
+<section class="story-block reverse fade">
+
+    <section class="story-text">
+
+        <p class="story-tag">🍵 WHY MATCHA?</p>
+
+        <h2>The Heart Of Wittycha</h2>
+
+        <p>
+            Matcha represents calmness, balance, and comfort.
+            Its rich flavor and vibrant green color became the inspiration
+            behind our brand identity.
+
+            Every cup is carefully crafted to create a smooth and enjoyable
+            experience that helps our customers slow down, recharge,
+            and enjoy the moment.
+        </p>
+
+    </section>
+
+</section>
+
+<section class="experience-section fade">
+
+    <p class="story-tag">☁️ MORE THAN A CAFÉ</p>
+
+    <h2>The Wittycha Experience</h2>
+
+    <section class="experience-grid">
+
+        <article class="experience-card">
+            <span>🍵</span>
+            <h3>Enjoy Matcha</h3>
+            <p>Freshly crafted drinks made for every mood.</p>
+        </article>
+
+        <article class="experience-card">
+            <span>🎀</span>
+            <h3>Discover Merch</h3>
+            <p>Cute collectibles designed to brighten your day.</p>
+        </article>
+
+        <article class="experience-card">
+            <span>✨</span>
+            <h3>Create Memories</h3>
+            <p>Moments worth sharing with friends and loved ones.</p>
+        </article>
+
+        <article class="experience-card">
+            <span>☁️</span>
+            <h3>Feel At Home</h3>
+            <p>A comfort space where everyone is welcome.</p>
+        </article>
+
+        <article class="experience-card">
+            <span>📸</span>
+            <h3>Capture Moments</h3>
+            <p>Every corner is thoughtfully designed to create aesthetic and photo-worthy memories.</p>
+        </article>
+
+        <article class="experience-card">
+            <span>💚</span>
+            <h3>Share Happiness</h3>
+            <p>More than products, we aim to deliver comfort, joy, and meaningful moments every day.</p>
+        </article>
+
+    </section>
+
+</section>
+
+<section class="story-name fade">
+
+    <p class="story-tag">
+        💡 BEHIND THE NAME
+    </p>
+
+    <h2>Why Wittycha?</h2>
+
+    <p>
+        The name Wittycha reflects creativity, warmth, and our love for matcha.
+
+        We wanted a name that feels playful yet comforting,
+        representing the cheerful atmosphere we hope every customer experiences.
+
+        It reminds us that happiness often comes from simple things:
+        a delicious drink, a cozy space, and meaningful moments shared together.
+    </p>
+
+</section>
+
+<section class="letter-section fade">
+
+    <p class="story-tag">
+        💌 A LETTER FROM WITTYCHA
+    </p>
+
+    <h2>To Our Lovely Customers</h2>
+
+    <p>
+        Thank you for being part of our journey.
+
+        Whether you visit us for a cup of matcha, a cute collectible,
+        or simply a moment of comfort, we are grateful to share these
+        experiences with you.
+
+        Your support inspires us to continue creating new flavors,
+        exciting ideas, and memorable moments.
+
+        We hope Wittycha remains a place that brings a little happiness
+        into your day.
+    </p>
+
+    <h3>
+        With Love, 💚<br>
+        Wittycha
+    </h3>
+
+</section>
+
+
+<footer>
+    <section class="footer-grid">
+        <section>
+            <img class="footerlogo" src="../img/logo.webp" alt="Logofooter">
+            <h2>Wittycha 💚</h2>
+            <p>Your Safe Place for Matcha & K-pop Happiness✨</p>
+        </section>
+
+        <section>
+            <h3>Store</h3>
+            <p>Pontianak</p>
+            <p>09.00 - 21.00</p>
+        </section>
+
+        <section>
+            <h3>Contact us</h3>
+            <h4>Whatsapp</h4>
+            <p>+62 812-3456-78910</p>
+            <h4>Email</h4>
+            <p>Wittycha@gmail.com</p>
+        </section>
+
+        <section>
+            <h3>Information</h3>
+            <p>Our Story</p>
+            <p>Gallery</p>
+        </section>
+
+        <section class="socialmedia">
+            <h3>Social Media</h3>
+            <section class="logososialmedia">
+                <img class="sociallogoig" src="../img/logoig.webp" alt="logoig">
+                <img class="sociallogo" src="../img/logotiktok.webp" alt="logotiktok">
+            </section>
+                
+            </section>
+        </section>
+    </section>
+
+    <section class="footer-bottom">
+        <p>Copyright ©2026 Wittycha.id. All Rights Reserved.</p>
+    </section>
+</footer>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Wittycha.id",
+        "image": "",
+        "@id": "",
+        "url": "https://wittychaid.vercel.app/",
+        "telephone": "0812345678910",
+        "priceRange": "10000 - 120000",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hos Cokroaminoto",
+            "addressLocality": "Pontianak",
+            "addressRegion": "KB",
+            "postalCode": "78117",
+            "addressCountry": "ID"
+        }
+    }
+    </script>
+
+<script>
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e){
+        if(this.getAttribute("href").startsWith("#")){
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href"))
+            .scrollIntoView({behavior: "smooth"});
+        }
+    });
+});
+
+
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+
+
+const elements = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+    elements.forEach(el => {
+        if(el.getBoundingClientRect().top < window.innerHeight - 50){
+            el.classList.add("show");
+        }
+    });
+});
+
+const wrappers = document.querySelectorAll(".slider-wrapper");
+
+wrappers.forEach(wrapper => {
+
+    const slider = wrapper.querySelector(".menu-slider");
+
+    const prev = wrapper.querySelector(".prev");
+    const next = wrapper.querySelector(".next");
+
+    next.addEventListener("click", () => {
+        slider.scrollBy({
+            left: 320,
+            behavior: "smooth"
+        });
+    });
+
+    prev.addEventListener("click", () => {
+        slider.scrollBy({
+            left: -320,
+            behavior: "smooth"
+        });
+    });
+
+});
+
+window.addEventListener("load", function(){
+    setTimeout(function(){
+        document
+            .getElementById("popup-message")
+            .classList.add("show");
+    }, 1200);
+});
+
+function closePopup(){
+    document
+        .getElementById("popup-message")
+        .classList.remove("show");
+}
+
+const cards = document.querySelectorAll(".special-card");
+
+window.addEventListener("scroll", () => {
+
+    cards.forEach(card => {
+
+        if(card.getBoundingClientRect().top < window.innerHeight - 80){
+            card.classList.add("show");
+        }
+
+    });
+
+});
+
+const counters = document.querySelectorAll(".counter");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            const counter = entry.target;
+
+            const target = parseInt(counter.dataset.target);
+            const suffix = counter.dataset.suffix || "";
+
+            let count = 0;
+
+            const updateCounter = () => {
+
+                const increment = target / 80;
+
+                if(count < target){
+
+                    count += increment;
+
+                    counter.textContent =
+                        Math.ceil(count).toLocaleString() + suffix;
+
+                    requestAnimationFrame(updateCounter);
+
+                }else{
+
+                    counter.textContent =
+                        target.toLocaleString() + suffix;
+
+                }
+
+            };
+
+            updateCounter();
+
+            observer.unobserve(counter);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.5
+});
+
+counters.forEach(counter => {
+    observer.observe(counter);
+});
+
+</script>
+
+</body>
+</html>

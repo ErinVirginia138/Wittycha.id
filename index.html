@@ -388,52 +388,54 @@
         <p>Copyright ©2026 Wittycha.id. All Rights Reserved.</p>
     </section>
 </footer>
-</body>
 
 <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Wittycha.id",
-    "url": "https://wittychaid.vercel.app/",
-    "logo": "https://wittychaid.vercel.app/img/logo.webp",
-    "description": "Matcha cafe and merchandise destination offering premium matcha drinks, cute collectibles, and cozy experiences.",
-    "sameAs": [
-        "https://instagram.com/wittycha.id",
-        "https://tiktok.com/@wittycha.id"
-    ]
-}
-</script>
-    
-<script>
-document.querySelectorAll("a").forEach(link=>{link.addEventListener("click",function(e){if(this.getAttribute("href").startsWith("#")){e.preventDefault();document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"})}})});function toggleDark(){document.body.classList.toggle("dark")}
-const elements=document.querySelectorAll(".fade");window.addEventListener("scroll",()=>{elements.forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-50){el.classList.add("show")}})});const track=document.querySelector(".review-track");track.innerHTML+=track.innerHTML;let position=0;const speed=0.5;function animate(){position+=speed;if(position>=track.scrollWidth/2){position-=track.scrollWidth/2}
-track.style.transform=`translateX(-${position}px)`;requestAnimationFrame(animate)}
-animate()
-
-window.addEventListener("load", () => {
-
-    if(!sessionStorage.getItem("promoShown")){
-
-        setTimeout(() => {
-
-            document.getElementById("modalpromo").style.display = "flex";
-
-            sessionStorage.setItem("promoShown","true");
-
-        }, 3000);
-
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Wittycha.id",
+        "url": "https://wittychaid.vercel.app/",
+        "logo": "https://wittychaid.vercel.app/img/logo.webp",
+        "description": "Matcha cafe and merchandise destination offering premium matcha drinks, cute collectibles, and cozy experiences.",
+        "sameAs": [
+            "https://instagram.com/wittycha.id",
+            "https://tiktok.com/@wittycha.id"
+        ]
     }
-
-});
-
-function closePromo(){
-
-    document.getElementById("modalpromo").style.display = "none";
-
-}
-
 </script>
+        
+    <script>
+    document.querySelectorAll("a").forEach(link=>{link.addEventListener("click",function(e){if(this.getAttribute("href").startsWith("#")){e.preventDefault();document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"})}})});function toggleDark(){document.body.classList.toggle("dark")}
+    const elements=document.querySelectorAll(".fade");window.addEventListener("scroll",()=>{elements.forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-50){el.classList.add("show")}})});const track=document.querySelector(".review-track");track.innerHTML+=track.innerHTML;let position=0;const speed=0.5;function animate(){position+=speed;if(position>=track.scrollWidth/2){position-=track.scrollWidth/2}
+    track.style.transform=`translateX(-${position}px)`;requestAnimationFrame(animate)}
+    animate()
+    
+    window.addEventListener("load", () => {
+    
+        if(!sessionStorage.getItem("promoShown")){
+    
+            setTimeout(() => {
+    
+                document.getElementById("modalpromo").style.display = "flex";
+    
+                sessionStorage.setItem("promoShown","true");
+    
+            }, 3000);
+    
+        }
+    
+    });
+    
+    function closePromo(){
+    
+        document.getElementById("modalpromo").style.display = "none";
+    
+    }
+    
+    </script>
+    
+</body>
+
 
 
 </html>

@@ -1239,6 +1239,181 @@ footer section {
     font-size:28px;
 }
 
+.gallery-section{
+
+    max-width:1200px;
+    margin:auto;
+    padding:100px 20px;
+
+    text-align:center;
+}
+
+.gallery-desc{
+
+    color:#666;
+    max-width:600px;
+    margin:15px auto 0;
+}
+
+/* FILTER */
+
+.gallery-filter{
+
+    display:flex;
+    justify-content:center;
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+}
+
+.filter-btn{
+    font:inherit;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+    border:none;
+
+    background:#f3f6f3;
+
+    padding:12px 20px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.filter-btn.active{
+
+    background:#8bc98f;
+
+    color:white;
+}
+
+.filter-btn:hover{
+
+    transform:translateY(-2px);
+}
+
+/* GRID */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:18px;
+
+    grid-auto-flow:dense;
+}
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    cursor:pointer;
+}
+
+.gallery-item img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+}
+
+/* PINTEREST SIZE */
+
+.tall{
+    grid-row:span 2;
+}
+
+.wide{
+    grid-column:span 2;
+}
+
+/* OVERLAY */
+
+.gallery-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    transparent,
+    rgba(0,0,0,.75));
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:20px;
+
+    text-align:left;
+
+    opacity:0;
+
+    transition:.3s;
+}
+
+.gallery-item:hover .gallery-overlay{
+
+    opacity:1;
+}
+
+.gallery-overlay h3{
+
+    color:white;
+    margin-bottom:5px;
+}
+
+.gallery-overlay p{
+
+    color:#ddd;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .gallery-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .wide{
+        grid-column:span 1;
+    }
+}
+
+
 </style>
 
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+MX+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -1281,170 +1456,385 @@ footer section {
 
 
 <section id="gallery">
-
-
-
-</section>
-<section class="story-hero fade">
+<section class="gallery-section fade">
 
     <p class="story-mini">
-        🍵 Signature Matcha Creations
+        OUR GALLERY 📸
     </p>
 
-    <h1>
-        Every Cup Has A Story
-    </h1>
+    <h2>
+        Moments At Wittycha
+    </h2>
 
-    <p>
-        What started as a simple love for matcha and comforting moments
-        slowly became a dream to create a place where everyone feels welcome.
+    <p class="gallery-desc">
+        A collection of matcha, memories, cute merch, and cozy moments.
     </p>
 
-</section>
+    <section class="gallery-filter">
+
+        <button class="filter-btn active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter-btn" data-filter="drink">
+            Drinks
+        </button>
+
+        <button class="filter-btn" data-filter="merch">
+            Merch
+        </button>
+
+        <button class="filter-btn" data-filter="special">
+            Special Items
+        </button>
+
+        <button class="filter-btn" data-filter="snack">
+            Snacks
+        </button>
+
+        <button class="filter-btn" data-filter="moment">
+            Moments
+        </button>
+
+        <button class="filter-btn" data-filter="space">
+            Space
+        </button>
+
+    </section>
+
+    <section class="gallery-grid">
+        <article class="gallery-item drink tall">
+
+            <img src="https://diamond-production-file-uploads.s3.ap-southeast-1.amazonaws.com/images/recipe/b0030dc0-1b68-4208-959c-084ef1f115bc.jpg" alt="Honey Matcha">
+
+            <section class="gallery-overlay">
+                <h3>🍵 Honey Matcha</h3>
+                <p>Creamy • Sweet • Comforting</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item drink">
+
+            <img src="https://mayskawaiikitchen.com/wp-content/uploads/2024/08/IMG_1118.jpg" alt="Coconut Matcha">
+
+            <section class="gallery-overlay">
+                <h3>🍃 Coconut Matcha</h3>
+                <p>Tropical • Refreshing</p>
+            </section>
+        </article>
+
+        <article class="gallery-item drink">
+            <img src="../img/latte.webp" alt="Matcha Latte">
+
+            <section class="gallery-overlay">
+                <h3>🍵 Matcha Latte</h3>
+                <p>Creamy • Signature Drink</p>
+            </section>
+        </article>
+
+        <article class="gallery-item drink">
+            <img src="../img/cream.webp" alt="Matcha Cream">
+
+            <section class="gallery-overlay">
+                <h3>💚 Matcha Cream</h3>
+                <p>Customer Favorite</p>
+            </section>
+        </article>
+
+        <article class="gallery-item drink">
+            <img src="https://www.siftandsimmer.com/wp-content/uploads/2024/06/IMG_3139-featured.jpg" alt="Strawberry Matcha">
+
+            <section class="gallery-overlay">
+                <h3>🍓 Strawberry Matcha</h3>
+                <p>Sweet • Refreshing</p>
+            </section>
+        </article>
+
+        <article class="gallery-item drink">
+            <img src="https://kissatea.com/cdn/shop/files/IMG_0631.heic?v=1761305016&width=3024" alt="Iced Matcha Float">
+
+            <section class="gallery-overlay">
+                <h3>🍦 Iced Matcha Float</h3>
+                <p>Cool • Creamy</p>
+            </section>
+        </article>
+
+        <article class="gallery-item drink">
+            <img src="https://138092681.cdn6.editmysite.com/uploads/1/3/8/0/138092681/FYPKEG4MXXYI7AOFDLAGA6JD.jpeg" alt="Dirty Matcha">
+
+            <section class="gallery-overlay">
+                <h3>☕ Dirty Matcha</h3>
+                <p>Bold • Rich Flavor</p>
+            </section>
+        </article>
+
+        <article class="gallery-item drink">
+            <img src="https://copinaco.com/cdn/shop/articles/Untitled_design-52-519293.jpg?v=1711575699" alt="Blueberry Matcha">
+
+            <section class="gallery-overlay">
+                <h3>🫐 Blueberry Matcha</h3>
+                <p>Fruity • Refreshing</p>
+            </section>
+        </article>
 
 
-<section class="story-block fade">
+        <article class="gallery-item merch">
 
-    <section class="story-text">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7quky-lgehjdu1gap5d4" alt="Mini Binder">
 
-        <p class="story-tag">🥐 Freshly Made Snacks</p>
+            <section class="gallery-overlay">
+                <h3>🎀 Mini Binder</h3>
+                <p>Cute • Collectible</p>
+            </section>
 
-        <h2>Where It All Started</h2>
+        </article>
 
-        <p>
-            Wittycha began with a simple idea: creating a cozy destination
-            where people could enjoy premium matcha while feeling relaxed,
-            inspired, and at home.
+        <article class="gallery-item merch tall">
 
-            We wanted to build something more than just a café.
-            A place where small moments become memorable experiences,
-            where every drink feels comforting, and where happiness can
-            be found in the little things.
-        </p>
+            <img src="https://i.pinimg.com/736x/6a/6a/42/6a6a42fbe4a13070f484d611b9e648af.jpg" alt="Tote Bag">
 
+            <section class="gallery-overlay">
+                <h3>👜 Tote Bag</h3>
+                <p>Everyday Essential</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item merch">
+            <img src="../img/photocard.webp" alt="Photocard Set">
+
+            <section class="gallery-overlay">
+                <h3>✨ Photocard Set</h3>
+                <p>K-pop Collection</p>
+            </section>
+        </article>
+
+        <article class="gallery-item merch">
+            <img src="https://i.pinimg.com/736x/a6/f7/f3/a6f7f3aa2d3c20a5a641d16c340053f9.jpg" alt="Sticker Pack">
+
+            <section class="gallery-overlay">
+                <h3>🎀 Sticker Pack</h3>
+                <p>Cute • Aesthetic</p>
+            </section>
+        </article>
+
+        <article class="gallery-item merch">
+            <img src="https://id-live-01.slatic.net/p/ff51da3a3e9b00b42f479b4896707f09.jpg" alt="Keychain">
+
+            <section class="gallery-overlay">
+                <h3>🔑 Keychain</h3>
+                <p>Everyday Companion</p>
+            </section>
+        </article>
+
+        <article class="gallery-item merch">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98x-luw8kap4b1c959" alt="Photocard Holder">
+
+            <section class="gallery-overlay">
+                <h3>💚 Photocard Holder</h3>
+                <p>Protect Your Collection</p>
+            </section>
+        </article>
+
+        <article class="gallery-item merch">
+            <img src="https://sg-test-11.slatic.net/p/76a66620534fde62fc47a431259da7bb.jpg" alt="Mini Plushie">
+
+            <section class="gallery-overlay">
+                <h3>🧸 Mini Plushie</h3>
+                <p>Soft • Cute</p>
+            </section>
+        </article>
+
+        <article class="gallery-item merch">
+            <img src="https://ae01.alicdn.com/kf/S293b9e9f3ef0493f97671b2ac145b4fan.jpg" alt="Photocard Sleeve Set">
+
+            <section class="gallery-overlay">
+                <h3>📂 Sleeve Set</h3>
+                <p>Collect • Protect</p>
+            </section>
+        </article>
+  
+
+        <article class="gallery-item moment">
+
+            <img src="../img/moments.webp" alt="Happiness Moment">
+
+            <section class="gallery-overlay">
+                <h3>📸 Witty Moments</h3>
+                <p>Captured Happiness</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item moment wide">
+
+            <img src="../img/friends.webp" alt="Matcha with Friends">
+
+            <section class="gallery-overlay">
+                <h3>💚 Matcha Time</h3>
+                <p>Memories With Friends</p>
+            </section>
+
+        </article>
+
+    
+        <article class="gallery-item moment">
+
+            <img src="../img/study.webp" alt="Study with Matcha">
+
+            <section class="gallery-overlay">
+                <h3>📚 Study With Matcha</h3>
+                <p>Focus • Cozy • Productive</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item space">
+
+            <img src="../img/corner.webp" alt="Cozy Corner">
+
+            <section class="gallery-overlay">
+                <h3>☁️ Cozy Corner</h3>
+                <p>Find Your Favorite Spot</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item space tall">
+
+            <img src="../img/aesthetic.webp" alt="Aesthetic Space">
+
+            <section class="gallery-overlay">
+                <h3>✨ Aesthetic Space</h3>
+                <p>Warm • Cozy • Relaxing</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item space">
+
+            <img src="../img/cupsleeve.webp" alt="Cup Sleeve Event">
+
+            <section class="gallery-overlay">
+                <h3>🎂 Cup Sleeve Event</h3>
+                <p>Celebrate Your Favorite Idol</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item space tall">
+
+            <img src="../img/lifestyle.webp" alt="Matcha Lifestyle">
+
+            <section class="gallery-overlay">
+                <h3>🌿 Matcha Lifestyle</h3>
+                <p>Slow Living • Cozy • Everyday Moments</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item snack">
+
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/uscannenberg/ZTPSP67UBND3HPTFUYTIEFFGDQ.jpg" alt="Salt Bread">
+
+            <section class="gallery-overlay">
+                <h3>🥐 Salt Bread</h3>
+                <p>Buttery • Soft • Savory</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item snack tall">
+
+            <img src="https://cdn.momsdish.com/wp-content/uploads/2023/05/Croffle.jpg" alt="Croffle">
+
+            <section class="gallery-overlay">
+                <h3>🧇 Croffle</h3>
+                <p>Crispy • Sweet • Perfect Matcha Pairing</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item snack">
+            <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2021-08-Truffle-Fries%2FKitchnKitchn3580-1_01" alt="Truffle Fries">
+
+            <section class="gallery-overlay">
+                <h3>🍟 Truffle Fries</h3>
+                <p>Crispy • Savory</p>
+            </section>
+        </article>
+
+        <article class="gallery-item snack">
+            <img src="https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photosV2/e5f495cf-e14d-427b-837d-d09327f1f064-retina-large.jpg" alt="Korean Chicken Bites">
+
+            <section class="gallery-overlay">
+                <h3>🍗 Korean Chicken Bites</h3>
+                <p>Crunchy • Flavorful</p>
+            </section>
+        </article>
+
+        <article class="gallery-item snack">
+            <img src="https://www.culinarycartel.com/wp-content/uploads/Korean-Oyster-Mushroom-Burger-2.webp" alt="Witty Burger">
+
+            <section class="gallery-overlay">
+                <h3>🍔 Witty Burger</h3>
+                <p>Hearty • Satisfying</p>
+            </section>
+        </article>
+
+        <article class="gallery-item special wide">
+
+            <img src="https://static.mercdn.net/item/detail/orig/photos/m80447905146_5.jpg?1750251287" alt="Idol Birthday Package">
+
+            <section class="gallery-overlay">
+                <h3>🎂 Idol Birthday Package</h3>
+                <p>Celebrate Your Bias With Matcha & Cute Merch</p>
+            </section>
+
+        </article>
+
+        <article class="gallery-item special">
+
+            <img src="https://bokksuboutique.com/cdn/shop/files/BTQ_2509_AutumnDrop_SM1205_MatchaMomentsBox_CloseUp_2000x2000_4b708aa2-b01f-4c7e-a9ce-5defee82e915.jpg?v=1757913418&width=620" alt="Matcha Gift Box">
+
+            <section class="gallery-overlay">
+                <h3>🎁 Matcha Gift Box</h3>
+                <p>Curated Matcha Treats For Every Occasion</p>
+            </section>
+        </article>
+
+        <article class="gallery-item special">
+            <img src="https://scoopyscoopz.com/cdn/shop/files/IMG-3919.heic?v=1761063294&width=1946" alt="Witty Surprise Box">
+
+            <section class="gallery-overlay">
+                <h3>🎁 Witty Surprise Box</h3>
+                <p>Mystery • Limited Edition</p>
+            </section>
+        </article>
+
+        <article class="gallery-item special">
+            <img src="https://thumbs.dreamstime.com/b/two-cups-matcha-latte-cute-art-top-view-green-lattes-wooden-table-one-smiling-face-heart-design-419964574.jpg" alt="Couple Matcha Set">
+
+            <section class="gallery-overlay">
+                <h3>💚 Couple Matcha Set</h3>
+                <p>Share The Happiness</p>
+            </section>
+        </article>
+
+        <article class="gallery-item special">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r990-lwzi8c3phq5oe7" alt="Matcha Dessert Box">
+
+            <section class="gallery-overlay">
+                <h3>🍰 Matcha Dessert Box</h3>
+                <p>Sweet • Matcha Lover</p>
+            </section>
+        </article>
     </section>
 
 </section>
 
-<section class="story-block reverse fade">
-
-    <section class="story-text">
-
-        <p class="story-tag">💌 Merchandise Corner</p>
-
-        <h2>The Heart Of Wittycha</h2>
-
-        <p>
-            Matcha represents calmness, balance, and comfort.
-            Its rich flavor and vibrant green color became the inspiration
-            behind our brand identity.
-
-            Every cup is carefully crafted to create a smooth and enjoyable
-            experience that helps our customers slow down, recharge,
-            and enjoy the moment.
-        </p>
-
-    </section>
-
 </section>
-
-<section class="experience-section fade">
-
-    <p class="story-tag">🎁 Special Packages</p>
-
-    <h2>The Wittycha Experience</h2>
-
-    <section class="experience-grid">
-
-        <article class="experience-card">
-            <span>🍵</span>
-            <h3>Enjoy Matcha</h3>
-            <p>Freshly crafted drinks made for every mood.</p>
-        </article>
-
-        <article class="experience-card">
-            <span>🎀</span>
-            <h3>Discover Merch</h3>
-            <p>Cute collectibles designed to brighten your day.</p>
-        </article>
-
-        <article class="experience-card">
-            <span>✨</span>
-            <h3>Create Memories</h3>
-            <p>Moments worth sharing with friends and loved ones.</p>
-        </article>
-
-        <article class="experience-card">
-            <span>☁️</span>
-            <h3>Feel At Home</h3>
-            <p>A comfort space where everyone is welcome.</p>
-        </article>
-
-        <article class="experience-card">
-            <span>📸</span>
-            <h3>Capture Moments</h3>
-            <p>Every corner is thoughtfully designed to create aesthetic and photo-worthy memories.</p>
-        </article>
-
-        <article class="experience-card">
-            <span>💚</span>
-            <h3>Share Happiness</h3>
-            <p>More than products, we aim to deliver comfort, joy, and meaningful moments every day.</p>
-        </article>
-
-    </section>
-
-</section>
-
-<section class="story-name fade">
-
-    <p class="story-tag">
-        🌿 Cozy Café Moments
-    </p>
-
-    <h2>Why Wittycha?</h2>
-
-    <p>
-        The name Wittycha reflects creativity, warmth, and our love for matcha.
-
-        We wanted a name that feels playful yet comforting,
-        representing the cheerful atmosphere we hope every customer experiences.
-
-        It reminds us that happiness often comes from simple things:
-        a delicious drink, a cozy space, and meaningful moments shared together.
-    </p>
-
-</section>
-
-<section class="letter-section fade">
-
-    <p class="story-tag">
-        💌 A LETTER FROM WITTYCHA
-    </p>
-
-    <h2>To Our Lovely Customers</h2>
-
-    <p>
-        Thank you for being part of our journey.
-
-        Whether you visit us for a cup of matcha, a cute collectible,
-        or simply a moment of comfort, we are grateful to share these
-        experiences with you.
-
-        Your support inspires us to continue creating new flavors,
-        exciting ideas, and memorable moments.
-
-        We hope Wittycha remains a place that brings a little happiness
-        into your day.
-    </p>
-
-    <h3>
-        With Love, 💚<br>
-        Wittycha
-    </h3>
-
-</section>
-
 
 <footer>
     <section class="footer-grid">
@@ -1642,6 +2032,47 @@ const observer = new IntersectionObserver((entries) => {
 
 counters.forEach(counter => {
     observer.observe(counter);
+});
+
+
+
+const filterBtns =
+document.querySelectorAll('.filter-btn');
+
+const galleryItems =
+document.querySelectorAll('.gallery-item');
+
+filterBtns.forEach(btn=>{
+
+    btn.addEventListener('click',()=>{
+
+        filterBtns.forEach(b=>
+            b.classList.remove('active')
+        );
+
+        btn.classList.add('active');
+
+        const filter =
+        btn.dataset.filter;
+
+        galleryItems.forEach(item=>{
+
+            if(
+                filter === 'all' ||
+                item.classList.contains(filter)
+            ){
+
+                item.style.display='block';
+
+            }else{
+
+                item.style.display='none';
+            }
+
+        });
+
+    });
+
 });
 
 </script>

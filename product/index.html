@@ -343,13 +343,6 @@ section {
     padding: 60px;
 }
 
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 20px;
-}
-
 article {
     background: white;
     border-radius: 12px;
@@ -914,6 +907,32 @@ footer section {
     color: #ddd;
 }
 
+.whatsapp-btn{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    background: #2e7d32;
+    color: white;
+
+    padding: 14px 24px;
+
+    border-radius: 999px;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow: 0 10px 25px rgba(46,125,50,0.3);
+
+    z-index: 9999;
+
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover{
+    transform: translateY(-5px);
+}
 
 </style>
 
@@ -1186,7 +1205,7 @@ footer section {
     </section>
 
 
-    <section id="Special Items">
+    <section id="Special-Items">
     <h3 class="slider-title">✨ Special Items</h3>
 
     <section class="slider-wrapper">
@@ -1236,7 +1255,7 @@ footer section {
     <a href="specialitems.html" class="detail-btn-slider">See Detail →</a>
 </section>
 
-<section id="Snack Corner">
+<section id="Snack-Corner">
 <h3 class="slider-title">🥨 Snack Corner</h3>
 
     <section class="slider-wrapper">
@@ -1422,6 +1441,12 @@ footer section {
         <p>Copyright ©2026 Wittycha.id. All Rights Reserved.</p>
     </section>
 </footer>
+
+<a href="https://wa.me/62812345678910?text=Halo%20Wittycha%20👋💚%0A%0AAku%20baru%20saja%20melihat%20website%20Wittycha%20dan%20tertarik%20dengan%20produk%20yang%20tersedia%20🍵✨%0A%0ABoleh%20minta%20info%20lebih%20lanjut?"
+   class="whatsapp-btn"
+   target="_blank">
+   🍵 Chat with Wittycha
+</a>
 
 <script type="application/ld+json">
     {
